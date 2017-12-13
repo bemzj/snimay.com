@@ -868,17 +868,17 @@ function DrawMap(container, provinces)
                 if (provinces[u].shadow != null)
                 {
                     provinces[u].shadow.transform("");
-                    provinces[u].shadow.translate(-1000, -1000)
+                    provinces[u].shadow.translate(-800, -600);
                 }
                 if (provinces[u].label != null)
                 {
                     provinces[u].label.transform("");
-                    provinces[u].label.translate(provinces[u].left * (v - 1), provinces[u].top * (v - 1))
+                    provinces[u].label.translate(provinces[u].left * (v - 1), provinces[u].top * (v - 1));
                 }
             }
             r = v
         }
     };
     t();
-    jQuery(window).resize(t)
+    jQuery(window).resize(t);
 };

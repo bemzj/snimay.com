@@ -12,6 +12,11 @@ $(function(){
 			$(this).siblings('img').stop().css('transform','rotate(0deg)');
 		}
 	});
+	$('.short').mouseleave(function(){
+		$(this).children('p').attr('isOpen',false);
+		$(this).children('p').siblings('.profess').slideUp();
+		$(this).children('p').siblings('img').stop().css('transform','rotate(0deg)');
+	});
 	$('.profess ul li').click(function(){
 		$(this).parents(".short").children('p').text($(this).children('p').text());
 		$(this).parents(".short").children('p').attr('isOpen',false);

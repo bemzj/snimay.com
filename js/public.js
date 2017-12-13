@@ -1,14 +1,12 @@
 $(function(){
 	//微信特效
-	$('.wechat').mouseover(function(){
-		$(this).find('.wtBox').show(function(){
-			$(this).css({'transform':'rotate(720deg)','top':'-180px','left':'-115px','width':'265px','height':'168px','padding':'2px'})
-		});
+	$('.wechat').mousemove(function(){
+		$(this).find('.wtBox').show();
+		$(this).find('.wtBox').addClass('animated flipInX')
 	});
 	$('.wechat').mouseout(function(){
-		$(this).find('.wtBox').show(function(){
-			$(this).css({'transform':'rotate(0deg)','top':'-96px','left':'15px','width':'0px','height':'0px','padding':'0px'})
-		});
+		$(this).find('.wtBox').hide();
+		$(this).find('.wtBox').removeClass('animated flipInX');
 	});
 	//出现回到顶部按钮
 	$(window).scroll(function(){

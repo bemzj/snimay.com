@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="zh-CN">
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -6,12 +7,17 @@
 		<meta content="yes" name="apple-mobile-web-app-capable"/>
 	    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
 	    <meta content="telephone=no" name="format-detection"/>
+	    <link rel="stylesheet" href="css/demo.css" />
+		<link rel="stylesheet" href="css/ydui.css" />
 	    <link rel="stylesheet" href="css/reset.min.css" />
 	    <link rel="stylesheet" href="css/public.css" />
-	    <link rel="stylesheet" href="css/social.css" />
+	    <link rel="stylesheet" href="css/server.css" />
+	    <link rel="stylesheet" href="lib/css/layui.css" />
+	    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+	    <link rel="stylesheet" href="css/order.css" />
 	    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 	    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-		<title>首页</title>
+		<title>品质服务</title>
 	</head>
 	<body>
 		<div id="banner">
@@ -20,7 +26,7 @@
 				<nav>
 					<div class="floatl logoL">
 						<a href="index.html">
-							<img src="img/logobb.png" style="display: block;"/>
+							<img src="img/logobb.png" />
 						</a>
 					</div>
 					<div class="floatr navR">
@@ -31,14 +37,14 @@
 							<li>
 								<a href="###">业务中心</a>
 							</li>
-							<li>
+							<li class="nActive">
 								<a href="server.html">品质服务</a>
 							</li>
 							<li>
-								<a href="###">加入诗尼曼</a>
+								<a href="join.html">加入诗尼曼</a>
 							</li>
-							<li class="nActive">
-								<a href="social.html" >社会责任</a>
+							<li>
+								<a href="social.html">社会责任</a>
 							</li>
 							<li>
 								<a href="###">投资者关系</a>
@@ -50,10 +56,10 @@
 								<a href="about.html">关于诗尼曼</a>
 							</li>
 							<li>
-								<a href="###" class="imgBtn"><img  src="img/moreB.png"/></a>
+								<a href="###" class="imgBtn"><img  src="img/more.png"/></a>
 							</li>
 							<li>
-								<a href="###" class="imgBtn"><img  src="img/searchB.png"/></a>
+								<a href="###" class="imgBtn"><img  src="img/search.png"/></a>
 							</li>
 						</ul>
 					</div>
@@ -61,183 +67,221 @@
 				</nav>
 			</header>
 		<!--轮播图-->
-			<img src="img/social.jpg"/>
+			<img src="img/serverBanner.jpg" />
 		</div>
-		<section id="idea">
-			<div class="bigTitle">
-				<ul>
-					<li>
-						<p class="bt">公益理念</p>
-					</li>
-					<li>
-						<p class="st">Good idea</p>
-					</li>
-					<li>
-						<span></span>
-					</li>
-				</ul>
-			</div>
-			<div class="heartBox">
-				<img src="img/heart.jpg" />
-				<div class="hContent">
-					<p>诗尼曼全屋定制作为行业先锋，成立伊始便致力于环保公益事业，白血病光头行动、梦想读书站、为爱筑家倡议等公益活动影响深远。2015年，诗尼曼签约著名影视巨星、公益达人海清担任品牌形象代言人，在全国范围更进一步开拓公益环保事业，秉承“引领时尚家居，打造健康生活”的企业使命，以切身行动将企业的责任心和爱心回馈社会！</p>
-				</div>
-			</div>
-		</section>
-		<section id="road">
-			<div class="bigTitle">
-				<ul>
-					<li>
-						<p class="bt">公益之路</p>
-					</li>
-					<li>
-						<p class="st">The road to public welfare</p>
-					</li>
-					<li>
-						<span></span>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<div class="loadBar">
-					
-				</div>
-			</div>
-			<div class="loveBox">
-				<div class="loveLeft floatl">
-					<img src="img/child.jpg" />
-				</div>
-				<div class="loveRight floatl">
+		<!--订单查询-->
+		<div id="order">
+			<div class="order">
+				<div class="bigTitle">
 					<ul>
 						<li>
-							<p class="lTitle">助力“小水滴新生”，积小爱成大善</p>
+							<p class="bt">订单查询</p>
 						</li>
 						<li>
-							<p class="date">2016-2017</p>
-							<div class="line"></div>
+							<p class="st">Order enquiry</p>
 						</li>
 						<li>
-							<p>小水滴新生专项基金” 是由China Little Flower发起，在中国华侨公益基金会注册的专项基金，专为患病的孤儿及贫困家庭患儿提供医疗救助、专业护理、术后寄养、监护人住宿及回访的全面服务。作为社会的爱心主体之一，诗尼曼与品牌形象代言人海清、媒体、公益机构携手，于2016年-2017年连续两年资助小水滴项目，让更多的患病孤儿及贫困家庭的患儿们得到更好的医疗救助。</p>
+							<span></span>
 						</li>
 					</ul>
 				</div>
-				<div class="clearl"></div>
+				<div class="sbox">
+					<div class="floatl input">
+						<input type="search" placeholder="请输入您的手机号码（以门店预留手机号为准）"/>
+					</div>
+					<div class="floatl sbtn">
+						<button></button>
+					</div>
+					<div class="clearl"></div>
+				</div>
+				<div class="obox">
+					<div class="oChild floatl o1">
+						<ul>
+							<li>
+								<div class="circleBox">
+									<img src="img/circleB.png" />
+								</div>
+							</li>
+							<li>
+								<p class="ot">正品保证</p>
+							</li>
+							<li>
+								<span></span>
+							</li>
+							<li>
+								<p class="stp">在当地正规的诗尼曼专卖店购买；总部对订单管理，可以在总部（官网、官微）查询订单资料、客户资料等。</p>
+							</li>
+						</ul>
+					</div>
+					<div class="oChild floatl o2">
+						<ul>
+							<li>
+								<div class="circleBox">
+									<img src="img/circleB.png" />
+								</div>
+							</li>
+							<li>
+								<p class="ot">产品防伪特征</p>
+							</li>
+							<li>
+								<span></span>
+							</li>
+							<li>
+								<p class="stp">诗尼曼产品在特定部位都印有诗尼曼“SNIMAY”钢印或激光防伪标签，具体可咨询当地门店。</p>
+							</li>
+						</ul>
+					</div>
+					<div class="oChild floatl o3">
+						<ul>
+							<li>
+								<div class="circleBox">
+									<img src="img/circleB.png" />
+								</div>
+							</li>
+							<li>
+								<p class="ot">业主权益保障</p>
+							</li>
+							<li>
+								<span></span>
+							</li>
+							<li>
+								<p class="stp">感谢您选择诗尼曼家居产品，请妥善保管诗尼曼家居产品保修卡，以便为您提供产品终身维护。</p>
+							</li>
+						</ul>
+					</div>
+					<div class="oChild floatl o4">
+						<ul>
+							<li>
+								<div class="circleBox">
+									<img src="img/circleB.png" />
+								</div>
+							</li>
+							<li>
+								<p class="ot">售后服务</p>
+							</li>
+							<li>
+								<span></span>
+							</li>
+							<li>
+								<p class="stp">全国统一服务热线：<br/>
+									400-883-2239<br/>
+									假冒诗尼曼产品举报电话：<br/>
+									13925062507    020-34756267</p>
+							</li>
+						</ul>
+					</div>
+					<div class="clearl"></div>
+				</div>
 			</div>
-		</section>
-		<section id="activity">
-			<div class="bigTitle">
-				<ul>
-					<li>
-						<p class="bt">公益活动</p>
-					</li>
-					<li>
-						<p class="st">Public welfare activities</p>
-					</li>
-					<li>
-						<span></span>
-					</li>
-				</ul>
-			</div>
-			<div class="activityBox">
-				<div class="activityChild floatl">
+			
+		</div>
+		<!--订单结果-->
+		<div id="result" class="result" style="display: none;">
+			<div class="resultTitle">
+				<div class="bigTitle">
 					<ul>
 						<li>
-							<div class="aImg">
-								<img src="img/activityImg.jpg" />
-								<p>2016-2017</p>
+							<p class="bt">订单列表</p>
+						</li>
+						<li>
+							<p class="st">The order list</p>
+						</li>
+						<li>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+				<div class="return">
+					<div class="rBtn">
+						<button class="rSearch">&lt;RETURN</button>
+					</div>					
+				</div>
+			</div>
+			<div class="resultBox">
+				<table >
+					<tr>
+						<td>序号</td>
+						<td>订单号</td>
+						<td>状态</td>
+						<td>生产信息</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>00698A170915002D</td>
+						<td>已作废</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>00698A170915002D</td>
+						<td>已作废</td>
+						<td>
+							<button class="look">点击查看</button>
+						</td>
+					</tr>
+				</table>
+				<table class="nomore" style="display: none;">
+					<tr>
+						<td>序号</td>
+						<td>订单号</td>
+						<td>状态</td>
+						<td>生产信息</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<div class="nomored">
+								<img src="img/centers.png" />
 							</div>
-						</li>
-						<li>
-							<p class="aTitle p1">助力“小水滴新生”，积小爱成大善</p>
-						</li>
-						<li>
-							<p class="aContent p2">“小水滴新生专项基金” 是由China Little Flower发起，在中国华侨公益基金会注册......</p>
-						</li>
-					</ul>
-				</div>
-				<div class="activityChild floatl">
-					<ul>
-						<li>
-							<div class="aImg">
-								<img src="img/activityImg.jpg" />
-								<p>2016-2017</p>
-							</div>
-						</li>
-						<li>
-							<p class="aTitle p1">关爱贫困人口 助力脱贫攻坚</p>
-						</li>
-						<li>
-							<p class="aContent p2">作为广东省标杆企业，诗尼曼有责任和义务积极投身广东新时期脱贫攻坚事业......</p>
-						</li>
-					</ul>
-				</div>
-				<div class="activityChild floatl">
-					<ul>
-						<li>
-							<div class="aImg">
-								<img src="img/activityImg.jpg" />
-								<p>2016-2017</p>
-							</div>
-						</li>
-						<li>
-							<p class="aTitle p1">“国民媳妇衣柜日”,给孩子一个健康的家</p>
-						</li>
-						<li>
-							<p class="aContent p2">“国民媳妇日”是诗尼曼首创健康居家的代言日，活动秉承“相知相伴诗尼曼......</p>
-						</li>
-					</ul>
-				</div>
-				<div class="activityChild floatl">
-					<ul>
-						<li>
-							<div class="aImg">
-								<img src="img/activityImg.jpg" />
-								<p>2016-2017</p>
-							</div>
-						</li>
-						<li>
-							<p class="aTitle p1">dream爱梦想，成立梦想读书站</p>
-						</li>
-						<li>
-							<p class="aContent p2">为让每个爱读书、有理想的孩子有书可读，广东衣柜行业协会联合狮子会启动......</p>
-						</li>
-					</ul>
-				</div>
-				<div class="activityChild floatl">
-					<ul>
-						<li>
-							<div class="aImg">
-								<img src="img/activityImg.jpg" />
-								<p>2016-2017</p>
-							</div>
-						</li>
-						<li>
-							<p class="aTitle p1">“阳光天使，点燃梦想”慈善拍卖</p>
-						</li>
-						<li>
-							<p class="aContent p2">2013年8月19日广东狮子会阳光天使服务队在广州珠江新城四季酒店举办以......</p>
-						</li>
-					</ul>
-				</div>
-				<div class="activityChild floatl">
-					<ul>
-						<li>
-							<div class="aImg">
-								<img src="img/activityImg.jpg" />
-								<p>2016-2017</p>
-							</div>
-						</li>
-						<li>
-							<p class="aTitle p1">光头行动，用爱照亮明天</p>
-						</li>
-						<li>
-							<p class="aContent p2">白血病是多少人的噩梦，它不仅摧残患者的身体，更使人在精神上承受无尽......</p>
-						</li>
-					</ul>
-				</div>
-				<div class="clearl"></div>
+							<p>很抱歉，该地区暂时没有门店！</p>
+						</td>
+					</tr>
+				</table>
 			</div>
-		</section>
+		</div>
+		<!--订单详情-->
+		<div id="resultDetails" class="result" style="display: none;">
+			<div class="resultTitle">
+				<div class="bigTitle">
+					<ul>
+						<li>
+							<p class="bt">订单列表</p>
+						</li>
+						<li>
+							<p class="st">The order list</p>
+						</li>
+						<li>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+				<div class="return">
+					<div class="rBtn">
+						<button class="rList">&lt;RETURN</button>
+					</div>					
+				</div>
+			</div>
+			<div class="resultDetails">
+				<table>
+					<tr>
+						<td>订单号：00698A170918009DX</td>
+						<td>订单状态：订单已发货</td>
+						<td>受理时间：2017-09-22</td>
+					</tr>
+					<tr>
+						<td>打款时间：2017-09-25</td>
+						<td>生产时间：2017-09-25</td>
+						<td>入库时间：2017-10-02</td>
+					</tr>
+					<tr>
+						<td>发货时间：2017-10-06</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+		</div>
 		<!--侧边导航-->
 		<div id="rightNav">
 			<div class="rNavChild">
@@ -499,7 +543,7 @@
 				<p>Copyright&copy;2017粤ICP备14016448号</p>
 			</div>
 		</footer>
-		<script type="text/javascript" src="js/public.js" ></script>
-		<script type="text/javascript" src="js/social.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>	
+		<script type="text/javascript" src="js/order.js" ></script>
 	</body>
 </html>

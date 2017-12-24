@@ -148,7 +148,8 @@ body {
     border: 1px solid #c8c8c8;
     margin: 0 auto;
     margin-bottom: 30px;
-    background-color: #eeeeee; }
+    background-color: #eeeeee;
+    position: relative; }
     #book .bookForm ul li input {
       width: 540px;
       height: 58px;
@@ -169,11 +170,47 @@ body {
     background: url(../img/jobphone.png) no-repeat 19px center;
     background-color: #eeeeee; }
   #book .bookForm li.type {
-    background: url(../img/type.png) no-repeat 19px center;
-    line-height: 58px;
-    text-indent: 48px;
-    background-color: #eeeeee;
-    font-size: 14px; }
+    border: 1px solid transparent; }
+    #book .bookForm li.type .typeBox {
+      width: 598px;
+      height: 58px;
+      line-height: 58px;
+      text-indent: 48px;
+      background-color: #eeeeee;
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #C8C8C8;
+      overflow: hidden;
+      z-index: 5; }
+    #book .bookForm li.type .moreType {
+      position: absolute;
+      top: 25px;
+      left: 545px; }
+    #book .bookForm li.type p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url(../img/type.png) no-repeat 19px center; }
+    #book .bookForm li.type .typeList {
+      width: 400px;
+      margin-left: 120px; }
+      #book .bookForm li.type .typeList > .floatl {
+        width: 100px; }
+      #book .bookForm li.type .typeList button {
+        width: 80px;
+        height: 30px;
+        border-radius: 8px;
+        display: block;
+        color: #888888;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 15px;
+        background-color: transparent; }
+      #book .bookForm li.type .typeList .btnActive {
+        background-color: #a51e32;
+        color: white; }
   #book .bookForm li.city {
     border: 0px;
     height: auto;

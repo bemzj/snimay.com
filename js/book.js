@@ -133,7 +133,7 @@ $(function(){
 			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
 		}
 		$(this).html("请选择市");
-		$('.area2>p').html("请选择区");
+		$('.area3>p').html("请选择区");
 	});
 	$('.area3>p').click(function(){
 		$('.area3').removeAttr('area');

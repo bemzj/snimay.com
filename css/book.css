@@ -183,7 +183,8 @@ body {
       left: 0;
       border: 1px solid #C8C8C8;
       overflow: hidden;
-      z-index: 5; }
+      z-index: 5;
+      margin-left: -1px; }
     #book .bookForm li.type .moreType {
       position: absolute;
       top: 25px;
@@ -230,6 +231,10 @@ body {
       position: relative; }
     #book .bookForm li.city > .floatr:nth-child(3) {
       margin-right: 0px; }
+  #book .titleWarm {
+    text-align: center;
+    color: #a51e32;
+    margin-bottom: 20px; }
 
 .proviceBox {
   position: absolute;

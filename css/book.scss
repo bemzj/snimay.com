@@ -241,6 +241,7 @@ body{
                 border: 1px solid #C8C8C8;
                 overflow: hidden;
                 z-index: 5;
+                margin-left: -1px;
             } 
             .moreType{
                 position: absolute;
@@ -300,6 +301,11 @@ body{
             }
             
         }
+    }
+    .titleWarm{
+        text-align: center;
+        color: $red;
+        margin-bottom: 20px;
     }
 }
 

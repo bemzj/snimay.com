@@ -10,64 +10,15 @@ header {
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff; }
-  #tenServer .tenVideoOut {
+  #tenServer .tenImg {
     width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    background-color: white; }
-  #tenServer .tenVideo {
-    width: 1200px;
-    height: 500px;
-    background-color: white;
-    margin-top: -80px;
-    box-shadow: 0px 10px 4px 0px rgba(231, 231, 231, 0.5); }
-    #tenServer .tenVideo .videoBox {
-      width: 600px;
-      height: 400px;
-      margin: 50px 0px 0px 50px;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      cursor: -ms-pointer; }
-      #tenServer .tenVideo .videoBox video {
-        width: 100%;
-        height: 100%;
-        border: 0; }
-      #tenServer .tenVideo .videoBox .vImg, #tenServer .tenVideo .videoBox .playVideo {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0%;
-        left: 0;
-        z-index: 1;
-        overflow: hidden;
-        -moz-transition: top 0.5s;
-        -webkit-transition: top 0.5s;
-        -ms-transition: top 0.5s;
-        transition: top 0.5s; }
-      #tenServer .tenVideo .videoBox .vImg img {
-        width: 100%; }
-      #tenServer .tenVideo .videoBox .playVideo {
-        background-color: rgba(0, 0, 0, 0.5);
-        top: 100%; }
-        #tenServer .tenVideo .videoBox .playVideo img {
-          margin-left: 268px;
-          margin-top: 168px; }
-    #tenServer .tenVideo .videoBox:hover .playVideo {
-      top: 0%; }
-    #tenServer .tenVideo .videoContent {
-      width: 410px;
-      margin: 50px 70px 0; }
-      #tenServer .tenVideo .videoContent .jobNameM {
-        margin-top: 70px; }
-        #tenServer .tenVideo .videoContent .jobNameM span {
-          color: #a51e32; }
-      #tenServer .tenVideo .videoContent .rLine {
-        margin-bottom: 20px; }
+    margin: 0 auto; }
+    #tenServer .tenImg img {
+      width: 100%; }
   #tenServer .tenServers {
     width: 1200px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 4px;
     padding-bottom: 80px; }
     #tenServer .tenServers .tenServerOut {
       width: 598px;
@@ -139,5 +90,109 @@ header {
       background-position-y: -4750px; }
     #tenServer .tenServers .tenServerOut:nth-child(2n) {
       margin-right: 0px; }
+
+#bookBox {
+  width: 1200px;
+  margin: 0 auto; }
+  #bookBox img {
+    transition: width 1.0s;
+    -webkit-transition: width 1.0s;
+    -moz-transition: width 1.0s;
+    -ms-transition: width 1.0s; }
+  #bookBox .bookTop {
+    margin-bottom: 80px; }
+  #bookBox .bookMiddle .bmg {
+    width: 599px;
+    height: 255px;
+    overflow: hidden;
+    margin-right: 2px;
+    margin-bottom: 2px; }
+    #bookBox .bookMiddle .bmg img {
+      width: 100%; }
+    #bookBox .bookMiddle .bmg ul {
+      width: 520px;
+      margin-left: 59px; }
+  #bookBox .bookMiddle .bmg:hover img {
+    width: 110%; }
+  #bookBox .bookMiddle .bmg:nth-child(2n) {
+    margin-right: 0; }
+  #bookBox .bookMiddleTwo .bmtop {
+    width: 599px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    height: 300px; }
+    #bookBox .bookMiddleTwo .bmtop img {
+      width: 100%; }
+    #bookBox .bookMiddleTwo .bmtop img:hover {
+      width: 110%; }
+  #bookBox .bookMiddleTwo .bmtop:nth-child(2n) {
+    margin-right: 0px; }
+  #bookBox .bookMiddleTwo .bmtimg {
+    width: 398px;
+    height: 300px;
+    overflow: hidden;
+    margin-right: 3px; }
+  #bookBox .bookMiddleTwo .bmtimg:nth-child(3n) {
+    margin-right: 0px; }
+  #bookBox .btimgBox {
+    width: 1200px; }
+    #bookBox .btimgBox .btimg {
+      width: 400px;
+      height: 466px;
+      position: relative; }
+      #bookBox .btimgBox .btimg .imgContain {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5; }
+        #bookBox .btimgBox .btimg .imgContain img {
+          height: 400px;
+          margin: 0 auto; }
+        #bookBox .btimgBox .btimg .imgContain p {
+          font-size: 16px;
+          line-height: 24px;
+          color: #333333;
+          text-align: center;
+          font-weight: bold; }
+    #bookBox .btimgBox .btimg > div:nth-child(1) {
+      width: 100%;
+      height: 200px;
+      margin-top: 266px;
+      background-color: #eeeeee; }
+
+.ip1 {
+  margin-top: 21px; }
+
+.ip2 {
+  margin-top: 10px; }
+
+.rp {
+  color: #a51e32;
+  line-height: 30px; }
+
+.rLine {
+  width: 60px;
+  height: 1px;
+  display: block;
+  border-bottom: 1.1px solid #a51e32;
+  margin: 10px 0; }
+
+.jobNameM {
+  color: #333333;
+  font-size: 18px;
+  margin-top: 35px; }
+
+.jobNameS {
+  color: #888888;
+  font-size: 12px;
+  font-family: arial;
+  line-height: 24px; }
+
+.jobD {
+  color: #888888;
+  font-size: 12px;
+  line-height: 30px; }
 
 /*# sourceMappingURL=businiessDetails.css.map */

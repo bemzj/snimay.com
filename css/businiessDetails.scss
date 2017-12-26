@@ -13,81 +13,18 @@ header{
     width: 100%;
     margin: 0 auto;
     background-color: #ffffff;
-    .tenVideoOut{
+    .tenImg{
         width: 1200px;
         margin: 0 auto;
-        position: relative;
-        background-color: white;
+        img{
+            width: 100%;
+        }
     }
-    .tenVideo{
-        width: 1200px;
-        height: 500px;
-        background-color: white;
-        margin-top: -80px;
-        box-shadow: 0px 10px 4px 0px rgba(231,231,231,0.5);
-        .videoBox{
-            width: 600px;
-            height: 400px;
-            margin: 50px 0px 0px 50px;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            cursor: -ms-pointer;
-            video{
-                width: 100%;
-                height: 100%;
-                border: 0;
-                
-            }
-            .vImg,.playVideo{
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0%;
-                left: 0;
-                z-index: 1;
-                overflow: hidden;
-                -moz-transition: top 0.5s;
-                -webkit-transition: top 0.5s;
-                -ms-transition: top 0.5s;
-                transition: top 0.5s;
-            }
-            .vImg img{
-                width: 100%;
-            }
-            .playVideo{
-                background-color: rgba(0,0,0,0.5);
-                top: 100%;
-               img{
-                    margin-left: 268px;
-                    margin-top: 168px;
-                } 
-            } 
-        }
-        .videoBox:hover{
-            .playVideo{
-                top: 0%;
-            }
-        }
-        .videoContent{
-            width: 410px;
-            margin: 50px 70px 0;
-            .jobNameM{
-                margin-top: 70px;
-                span{
-                    color: $red;
-                }
-            }
-            .rLine{
-                margin-bottom: 20px;
-            }
-        }
-        
-    }
+    
     .tenServers{
         width: 1200px;
         margin: 0 auto;
-        margin-top: 40px;
+        margin-top: 4px;
         padding-bottom: 80px;
         .tenServerOut {
             width: 598px;
@@ -191,4 +128,136 @@ header{
         }
     }
     
+}
+#bookBox{
+    width: 1200px;
+    margin: 0 auto;
+    img{
+        transition: width 1.0s;
+        -webkit-transition: width 1.0s;
+        -moz-transition: width 1.0s;
+        -ms-transition: width 1.0s; 
+    }
+    .bookTop{
+        margin-bottom: 80px;
+    }
+    .bookMiddle{
+        .bmg{
+            width: 599px;
+            height: 255px;
+            overflow: hidden;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            img{
+                width: 100%;
+            }
+            ul{
+                width: 520px;
+                margin-left: 59px;
+            }
+        }
+        .bmg:hover{
+            img{
+                width: 110%;
+            }
+        }
+        .bmg:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+    .bookMiddleTwo{
+        .bmtop{
+            width: 599px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            height: 300px;
+            img{
+                width: 100%;
+            }
+            img:hover{
+                width: 110%;
+            }
+        }
+        .bmtop:nth-child(2n){
+            margin-right: 0px;
+        }
+        .bmtimg{
+            width: 398px;
+            height: 300px;
+            overflow: hidden;
+            margin-right:3px;
+        }
+        .bmtimg:nth-child(3n){
+            margin-right: 0px;
+        }
+    }
+    .btimgBox{
+        width: 1200px;
+        .btimg{
+            width: 400px;
+            height: 466px;
+            position: relative;
+            .imgContain{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 5;
+                img{
+                    height: 400px;
+                    margin: 0 auto;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $black;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+            
+        }
+        .btimg>div:nth-child(1){
+            width: 100%;
+            height: 200px;
+            margin-top: 266px;
+            background-color: #eeeeee;
+        }
+    }
+}
+.ip1{
+    margin-top: 21px;
+}
+.ip2{
+    margin-top: 10px;
+}
+.rp{
+    color: $red;   
+    line-height: 30px;
+}
+.rLine{
+    width: 60px;
+    height: 1px;
+    display: block;
+    border-bottom: 1.1px solid $red;
+    margin: 10px 0;
+}
+.jobNameM {
+    color: $black;
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.jobNameS {
+    color: #888888;
+    font-size: 12px;
+    font-family: arial;
+    line-height: 24px;
+}
+
+.jobD {
+    color: #888888;
+    font-size: 12px;
+    line-height: 30px;
 }

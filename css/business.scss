@@ -12,6 +12,97 @@ header{
 #choiceBox{
     width: 1200px;
     margin: 0 auto;
+    .cType{
+        width: 1200px;
+        margin-top: 3px;
+        .typeBox{
+            width: 1200px;
+            position: relative;   
+           border-bottom: 1px solid transparent;      
+            .tTitle{
+                position: absolute;
+                width: 140px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #eeeeee;
+                color: $black;
+                
+                p{
+                    text-align: center;
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -8px;
+                }
+                
+            }
+            .tBox{
+                min-height: 42px;
+                width: 1050px;
+                margin-left: 150px;
+                padding-top: 7px;
+                .hasChoice{
+                    float: left;
+                    padding: 0 20px;
+                    height: 34px;
+                    margin: 0px 7px 7px 7px;
+                    border: 1px solid $red;
+                    position: relative;
+                    p{
+                        line-height: 34px;
+                        color: $black;
+                        font-size: 14px;
+                    }
+                    a{
+                        display: block;
+                        width: 13px;
+                        height: 13px;
+                        background: url(../img/closeRed.png) no-repeat center center;
+                        background-size: 100% 100%;
+                        position:absolute;
+                        top: -6.5px;
+                        right: -6.5px;
+                        
+                    }
+                }
+                .clBox{
+                    border-bottom: 1px solid #EEEEEE;
+                    
+                }
+                .choiceList{
+                    display: block;
+                    float: left;
+                    width: 140px;
+                    line-height: 36px;
+                    height: 36px;
+                    margin: 0px 18px 6px 17px;
+                    text-align: center;
+                    color: $black;
+                    font-size: 14px;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -7.5px;
+                        display: inline-block;
+                        height: 15px;
+                        width: 1px;
+                        background-color: #eeeeee;
+                        right: -17px;
+                    }
+                }
+                .choiceList:last-child{
+                    span{
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
 }
 #results{
     width: 1200px;

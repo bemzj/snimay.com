@@ -9,6 +9,78 @@ header {
 #choiceBox {
   width: 1200px;
   margin: 0 auto; }
+  #choiceBox .cType {
+    width: 1200px;
+    margin-top: 3px; }
+    #choiceBox .cType .typeBox {
+      width: 1200px;
+      position: relative;
+      border-bottom: 1px solid transparent; }
+      #choiceBox .cType .typeBox .tTitle {
+        position: absolute;
+        width: 140px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #eeeeee;
+        color: #333333; }
+        #choiceBox .cType .typeBox .tTitle p {
+          text-align: center;
+          width: 100%;
+          font-size: 16px;
+          line-height: 16px;
+          position: absolute;
+          top: 50%;
+          margin-top: -8px; }
+      #choiceBox .cType .typeBox .tBox {
+        min-height: 42px;
+        width: 1050px;
+        margin-left: 150px;
+        padding-top: 7px; }
+        #choiceBox .cType .typeBox .tBox .hasChoice {
+          float: left;
+          padding: 0 20px;
+          height: 34px;
+          margin: 0px 7px 7px 7px;
+          border: 1px solid #a51e32;
+          position: relative; }
+          #choiceBox .cType .typeBox .tBox .hasChoice p {
+            line-height: 34px;
+            color: #333333;
+            font-size: 14px; }
+          #choiceBox .cType .typeBox .tBox .hasChoice a {
+            display: block;
+            width: 13px;
+            height: 13px;
+            background: url(../img/closeRed.png) no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            top: -6.5px;
+            right: -6.5px; }
+        #choiceBox .cType .typeBox .tBox .clBox {
+          border-bottom: 1px solid #EEEEEE; }
+        #choiceBox .cType .typeBox .tBox .choiceList {
+          display: block;
+          float: left;
+          width: 140px;
+          line-height: 36px;
+          height: 36px;
+          margin: 0px 18px 6px 17px;
+          text-align: center;
+          color: #333333;
+          font-size: 14px;
+          position: relative; }
+          #choiceBox .cType .typeBox .tBox .choiceList span {
+            position: absolute;
+            top: 50%;
+            margin-top: -7.5px;
+            display: inline-block;
+            height: 15px;
+            width: 1px;
+            background-color: #eeeeee;
+            right: -17px; }
+        #choiceBox .cType .typeBox .tBox .choiceList:last-child span {
+          display: none; }
 
 #results {
   width: 1200px;

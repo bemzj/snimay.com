@@ -615,6 +615,9 @@ header nav .navR ul li a{
                 color: #888888;
                 margin-right: 8px;
                 border: 1px solid transparent;
+                img{
+                    width: 100%;
+                }
             } 
             .colorActive{
                 border-color:$red;

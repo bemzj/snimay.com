@@ -6,5 +6,9 @@ $(function(){
         loop:true,
         prevButton:'.prev',
 		nextButton:'.next',
-    })
+    });
+    $('.colorList').find('a').click(function(){
+    	$(this).addClass('colorActive');
+    	$(this).parent('li').siblings('li').find('a').removeClass('colorActive');
+    });
 });

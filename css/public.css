@@ -18,6 +18,92 @@
     margin: 0 auto;
     padding-top: 10px; }
 
+header > nav > .navR ul > li:hover > .secondBox {
+  height: 258px; }
+
+.secondBox {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  left: 0px;
+  height: 0px;
+  background-color: white;
+  overflow: hidden;
+  transition: height 0.25s linear;
+  -moz-transition: height 0.25s linear;
+  -webkit-transition: height 0.25s linear;
+  -ms-transition: height 0.25s linear; }
+  .secondBox img {
+    transition: width 1.0s,transform 0.5s;
+    -moz-transition: width 1.0s,transform 0.5s;
+    -webkit-transition: width 1.0s,transform 0.5s;
+    -ms-transition: width 1.0s,transform 0.5s; }
+  .secondBox .swiper-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 50px;
+    position: relative; }
+    .secondBox .swiper-container .prevLeft {
+      position: absolute;
+      height: 20px !important;
+      width: 12px !important;
+      top: 50%;
+      left: 10px;
+      margin-top: -10px;
+      height: 12px;
+      z-index: 5; }
+    .secondBox .swiper-container .nextRight {
+      position: absolute;
+      height: 20px !important;
+      top: 50%;
+      width: 12px !important;
+      right: 10px;
+      margin-top: -10px;
+      height: 12px;
+      z-index: 5; }
+  .secondBox .imgContent {
+    width: 200px;
+    margin: 0 auto; }
+    .secondBox .imgContent .navImg {
+      width: 200px;
+      height: 110px;
+      overflow: hidden; }
+      .secondBox .imgContent .navImg img {
+        width: 100%; }
+  .secondBox .imgContent:hover .navImg {
+    box-shadow: 0 0 2px 2px rgba(51, 51, 51, 0.2); }
+    .secondBox .imgContent:hover .navImg img {
+      width: 120% !important; }
+  .secondBox .imgContent:hover .navContent p {
+    color: #a51e32; }
+  .secondBox .navContent {
+    position: relative;
+    margin-top: 16px; }
+    .secondBox .navContent p {
+      line-height: 16px;
+      font-size: 16px;
+      text-indent: 10px; }
+    .secondBox .navContent a {
+      position: absolute;
+      top: -2px;
+      right: 20px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background: url(../img/rightY.png) no-repeat center center;
+      background-size: auto 10px; }
+      .secondBox .navContent a img {
+        width: 100%; }
+    .secondBox .navContent a:hover img {
+      transform: rotate(360deg); }
+
+header:hover {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  box-shadow: 0 0 2px 4px rgba(51, 51, 51, 0.2) !important; }
+  header:hover nav > .navR > ul > li > a {
+    color: white !important; }
+
 #popNormal {
   position: fixed;
   top: 0;
@@ -130,15 +216,104 @@ header {
       header nav .navR ul li a {
         font-size: 14px;
         color: #ffffff;
-        padding: 30px 20px 24px;
-        line-height: 26px;
-        height: 26px; }
+        padding: 30px 20px 30px;
+        line-height: 20px;
+        height: 20px;
+        position: relative;
+        z-index: 5; }
+      header nav .navR ul li > a:before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        background-color: #a51e32;
+        transition: left 0.25s,width 0.25s;
+        -webkit-transition: left 0.25s,width 0.25s;
+        -moz-transition: left 0.25s,width 0.25s;
+        -ms-transition: left 0.25s,width 0.25s;
+        z-index: -1; }
+      header nav .navR ul li > a:hover {
+        color: white !important; }
+      header nav .navR ul li > a:hover:before {
+        left: 0%;
+        width: 100%; }
       header nav .navR ul li .imgBtn {
         padding: 24px 5px; }
+      header nav .navR ul li .imgBtn:before {
+        content: none; }
     header nav .navR ul li.nActive a {
-      color: #a51e32; }
-    header nav .navR ul li:hover a {
       color: #a51e32 !important; }
+    header nav .navR ul li:hover > a {
+      color: white !important; }
+
+.searchBtn {
+  transition: margin-left 0.5s;
+  -webkit-transition: margin-left 0.5s;
+  -moz-transition: margin-left 0.5s;
+  -ms-transition: margin-left 0.5s; }
+
+.sBox {
+  position: relative; }
+
+.sBox:hover .searchBtn {
+  margin-left: 120px; }
+
+.sBox:hover .swordBox {
+  width: 120px; }
+
+.sword {
+  height: 32px;
+  width: 108px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 1px solid white;
+  background-color: transparent;
+  text-indent: 15px;
+  color: white; }
+
+.swordBox {
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -ms-transition: width 0.5s;
+  position: absolute;
+  top: 23px;
+  left: 0;
+  height: 34px;
+  width: 0px;
+  overflow: hidden; }
+
+.linkBoxs:hover .linkBox {
+  height: 380px; }
+
+.linkBoxs {
+  position: relative; }
+  .linkBoxs .linkBox {
+    position: absolute;
+    overflow: hidden;
+    top: 80px;
+    right: -38px;
+    width: 160px;
+    height: 0px;
+    background-color: white;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    box-shadow: 0 0 2px 2px rgba(231, 231, 231, 0.2); }
+    .linkBoxs .linkBox ul li:nth-child(1) {
+      margin-top: 10px; }
+    .linkBoxs .linkBox ul li {
+      float: none; }
+      .linkBoxs .linkBox ul li a {
+        padding: 10px 0;
+        text-align: center;
+        color: #333333 !important; }
+      .linkBoxs .linkBox ul li a:before {
+        left: 0%; }
 
 #rightNav {
   position: fixed;
@@ -353,9 +528,5 @@ footer {
   font-size: 12px;
   line-height: 30px;
   color: #888888; }
-
-@media (max-width: 1200px) {
-  header nav {
-    width: 1080px; } }
 
 /*# sourceMappingURL=public.css.map */

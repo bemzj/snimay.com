@@ -19,17 +19,19 @@ $(function(){
 			}	
 		},onSlideChangeStart: function(swiper){
 	       if(swiper.activeIndex%2==0){
-	       		$('.logoL a img').attr('src','img/logob.png');
+	       		$('.logoL a img').attr('src','img/logobb.png');
 	       		$('header nav .navR ul li a').css('color',"#333333");
 	       		$('header nav .navR ul li:nth-child(1) a').css('color',"#a51e32");
 	       		$('header nav .navR ul li:nth-child(9) a img').attr('src','img/moreB.png');
 	       		$('header nav .navR ul li:nth-child(10) a img').attr('src','img/searchB.png');
+	       		$('header .sword').css('border-color','#C8C8C8');
 	       }else{
 	       		$('.logoL a img').attr('src','img/logo.png');	       		
 	       		$('header nav .navR ul li a').css('color','#FFFFFF');
 	       		$('header nav .navR ul li:nth-child(1) a').css('color',"#a51e32");
 	       		$('header nav .navR ul li:nth-child(9) a img').attr('src','img/more.png');
 	       		$('header nav .navR ul li:nth-child(10) a img').attr('src','img/search.png');
+	       		$('header .sword').css('border-color','white');
 	       }
 	    }
 	});  

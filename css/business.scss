@@ -40,7 +40,7 @@ header{
                 
             }
             .tBox{
-                min-height: 42px;
+                min-height: 44px;
                 width: 1050px;
                 margin-left: 150px;
                 padding-top: 7px;
@@ -51,12 +51,15 @@ header{
                     margin: 0px 7px 7px 7px;
                     border: 1px solid $red;
                     position: relative;
+                    
                     p{
                         line-height: 34px;
                         color: $black;
                         font-size: 14px;
+                        
                     }
                     a{
+                        overflow: hidden;
                         display: block;
                         width: 13px;
                         height: 13px;
@@ -72,6 +75,10 @@ header{
                     border-bottom: 1px solid #EEEEEE;
                     
                 }
+                .clActive{
+                    background-color: $red!important;
+                    color: white!important;
+                }
                 .choiceList{
                     display: block;
                     float: left;
@@ -83,6 +90,8 @@ header{
                     color: $black;
                     font-size: 14px;
                     position: relative;
+                    cursor: pointer;
+                    cursor: -ms-pointer;
                     span{
                         position: absolute;
                         top: 50%;
@@ -94,12 +103,15 @@ header{
                         right: -17px;
                     }
                 }
-                .choiceList:last-child{
+                .choiceList:nth-last-child(2){
                     span{
                         display: none;
                     }
                 }
-
+                .choiceList:hover{
+                    background-color: $red;
+                    color: white;
+                }
             }
         }
     }
@@ -273,3 +285,4 @@ header{
         margin-right: 0px;
     }
 }
+

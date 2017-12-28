@@ -33,7 +33,7 @@ header {
           top: 50%;
           margin-top: -8px; }
       #choiceBox .cType .typeBox .tBox {
-        min-height: 42px;
+        min-height: 44px;
         width: 1050px;
         margin-left: 150px;
         padding-top: 7px; }
@@ -49,6 +49,7 @@ header {
             color: #333333;
             font-size: 14px; }
           #choiceBox .cType .typeBox .tBox .hasChoice a {
+            overflow: hidden;
             display: block;
             width: 13px;
             height: 13px;
@@ -59,6 +60,9 @@ header {
             right: -6.5px; }
         #choiceBox .cType .typeBox .tBox .clBox {
           border-bottom: 1px solid #EEEEEE; }
+        #choiceBox .cType .typeBox .tBox .clActive {
+          background-color: #a51e32 !important;
+          color: white !important; }
         #choiceBox .cType .typeBox .tBox .choiceList {
           display: block;
           float: left;
@@ -69,7 +73,9 @@ header {
           text-align: center;
           color: #333333;
           font-size: 14px;
-          position: relative; }
+          position: relative;
+          cursor: pointer;
+          cursor: -ms-pointer; }
           #choiceBox .cType .typeBox .tBox .choiceList span {
             position: absolute;
             top: 50%;
@@ -79,8 +85,11 @@ header {
             width: 1px;
             background-color: #eeeeee;
             right: -17px; }
-        #choiceBox .cType .typeBox .tBox .choiceList:last-child span {
+        #choiceBox .cType .typeBox .tBox .choiceList:nth-last-child(2) span {
           display: none; }
+        #choiceBox .cType .typeBox .tBox .choiceList:hover {
+          background-color: #a51e32;
+          color: white; }
 
 #results {
   width: 1200px;

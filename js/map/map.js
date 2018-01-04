@@ -791,13 +791,13 @@ function DrawMap(container, provinces)
                         {
                             z = C - 30 - provinces
                         }
-                        var v = {
-                            fill: "#4F9BD5",
-                            "fill-opacity": 0.3,
-                            stroke: "#999",
-                            "stroke-width": 1,
-                            "stroke-opacity": 0.3
-                        };
+//                      var v = {
+//                          fill: "#4F9BD5",
+//                          "fill-opacity": 0.3,
+//                          stroke: "#999",
+//                          "stroke-width": 1,
+//                          "stroke-opacity": 0.3
+//                      };
                         if (self.triangle1)
                         {
                             self.triangle1.remove()
@@ -810,47 +810,45 @@ function DrawMap(container, provinces)
                         {
                             self.triangle3.remove()
                         }
-                        self.triangle1 = c.path("M " + (z + provinces).toString(10) + "," + E.toString(10) + " L " + (z + provinces).toString(10) + "," + (E + D).toString(10) + " L " + C.toString(10) + "," + B.toString() + "Z").attr(v);
-                        self.triangle2 = c.path("M " + z.toString(10) + "," + (E + D).toString(10) + " L " + (z + provinces).toString(10) + "," + (E + D).toString(10) + " L " + C.toString(10) + "," + B.toString() + "Z").attr(v);
-                        self.triangle3 = c.path("M " + z.toString(10) + "," + E.toString(10) + " L " + z.toString(10) + "," + (E + D).toString(10) + " L " + C.toString(10) + "," + B.toString() + "Z").attr(v);
-                        if (self.label != null)
-                        {
-                            self.label.remove()
-                        }
-                        self.label = c.text((z + 60), (E + 10), u.text).attr({
-                            font: "14px Arial",
-                            fill: "#000",
-                            "text-align": "center"
-                        });
-                        if (self.tip == null)
-                        {
-                            self.tip = c.rect(z, E, provinces, D).attr({
-                                fill: "90-#FFFFFF:5-#EBEBEB:95",
-                                stroke: "#CCC",
-                                "stroke-width": 5,
-                                "stroke-opacity": 0.5
-                            })
-                        } else
-                        {
-                            self.tip.stop();
-                            self.tip.animate({
-                                x: z,
-                                y: E
-                            }, 0, null)
-                        }
-                        self.tip.toFront();
-                        self.label.toFront();
+//                      self.triangle1 = c.path("M " + (z + provinces).toString(10) + "," + E.toString(10) + " L " + (z + provinces).toString(10) + "," + (E + D).toString(10) + " L " + C.toString(10) + "," + B.toString() + "Z").attr(v);
+//                      self.triangle2 = c.path("M " + z.toString(10) + "," + (E + D).toString(10) + " L " + (z + provinces).toString(10) + "," + (E + D).toString(10) + " L " + C.toString(10) + "," + B.toString() + "Z").attr(v);
+//                      self.triangle3 = c.path("M " + z.toString(10) + "," + E.toString(10) + " L " + z.toString(10) + "," + (E + D).toString(10) + " L " + C.toString(10) + "," + B.toString() + "Z").attr(v);
+//                      if (self.label != null)
+//                      {
+//                          self.label.remove()
+//                      }
+//                      self.label = c.text((z + 60), (E + 10), u.text).attr({
+//                          font: "14px Arial",
+//                          fill: "#000",
+//                          "text-align": "center"
+//                      });
+//                      if (self.tip == null)
+//                      {
+//                          self.tip = c.rect(z, E, provinces, D).attr({
+//                              fill: "90-#FFFFFF:5-#EBEBEB:95",
+//                              stroke: "#CCC",
+//                              "stroke-width": 5,
+//                              "stroke-opacity": 0.5
+//                          })
+//                      } else
+//                      {
+//                          self.tip.stop();
+//                          self.tip.animate({
+//                              x: z,
+//                              y: E
+//                          }, 0, null)
+//                      }
+//                      self.tip.toFront();
+//                      self.label.toFront();
                         c.safari()
                     }
                 })(i), 0)
+                var id = parseInt(this.id/3);
+        		$('.provice').text(provinces[id].text); 
             }
         })(provinces[q]));
         provinces[q].label.click(s);
         provinces[q].path.click(s);
-        provinces[q].path.click(function(){
-        	var id = parseInt(this.id/3);
-        	$('.provice').text(provinces[id].text);       	
-        });
       	
     }
 

@@ -5,7 +5,8 @@
 
 #server {
   width: 100%;
-  background-color: #EEEEEE; }
+  background-color: #EEEEEE;
+  padding-bottom: 80px; }
   #server .choice {
     width: 580px;
     margin: 0 auto;

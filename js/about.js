@@ -53,7 +53,7 @@ $(function(){
 				case 19:
 				case 23:
 				case 27:
-				case 32:
+				case 33:
 					$('.lr1').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
 				break;
 				case 4:
@@ -65,7 +65,7 @@ $(function(){
 				case 17:
 				case 20:
 				case 21:
-				case 33:
+				case 32:
 					$('.lr2').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
 				break;
 				case 1:
@@ -96,8 +96,32 @@ $(function(){
 			$('.proviceBox').remove();
 			$(target).addClass('zjProvice');
 			$(target).attr('provice',$(this).attr('c'));
+			console.log($(this).html());
+			console.log(map["0"].text);
+			var j;
+			for(j=0; j<map.length;j++)
+			{
+				if(map[j].text == $(this).html())
+				{
+					break;
+				}
+			}
+			for(var z=0;z<map.length;z++)
+			{
+				if(z==j)
+				{
+					map[z].path.attr({
+				    	"fill-opacity": 0.5
+				    });
+				}else{
+					map[z].path.attr({
+				    	"fill-opacity": 1
+				    });
+				}
+			}
 		});
 	}
+	console.log(citys)
 	$('.area1>p').click(function(){
 		$('.proviceBox').remove();
 		$('.area1').removeAttr('provice');
@@ -177,6 +201,7 @@ $(function(){
 		$(this).parents(".short").children('p').siblings('img').stop().css('transform','rotate(0deg)');
 	});
 	var mapExist = false;
+	var map;
 	//选择
 	$('.netNavs ul li button').click(function(){
 		$(this).addClass('btnActive');
@@ -259,9 +284,10 @@ $(function(){
 					mapExist = true;
 					var c = Raphael("map_container", 600, 600);
 					// 初始化地图
-					var map = InitializeMap(c, "0.2", "#C9E9F7");
+					map = InitializeMap(c, "0.2", "#C9E9F7");
 					// 绘制地图
 					DrawMap(c, map);
+					console.log(map);
 				}
 				
 				break;

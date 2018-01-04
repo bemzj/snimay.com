@@ -312,6 +312,10 @@
         height: 30px;
         border: 1px solid #c8c8c8;
         margin-top: 10px; }
+      #contact .contact .methods .aBox button:hover {
+        background-color: #a51e32;
+        border-color: #a51e32;
+        color: white; }
     #contact .contact .company {
       padding: 80px 0; }
       #contact .contact .company .map {

@@ -382,6 +382,11 @@ $black:#333333;
                     border: 1px solid #c8c8c8;
                     margin-top: 10px;
                 }
+                button:hover{
+                    background-color: $red;
+                    border-color: $red;
+                    color: white;
+                }
             }
         }
         .company{

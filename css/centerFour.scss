@@ -136,7 +136,8 @@ body{
             }
             .cMiddle{
                 width: 620px;
-                height: 150px;
+//              height: 150px;
+                min-height: 150px;
                 margin: 30px 60px;
                 position: relative;
                 span {

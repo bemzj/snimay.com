@@ -112,7 +112,7 @@ body {
           -webkit-transition: width 0.5s,margin 0.5s; }
       #news .report .reportBox .cMiddle {
         width: 620px;
-        height: 150px;
+        min-height: 150px;
         margin: 30px 60px;
         position: relative; }
         #news .report .reportBox .cMiddle span {

@@ -43,7 +43,7 @@ header > nav > .navR ul > li:hover > .secondBox {
     margin: 0 auto;
     padding: 50px 0 50px;
     position: relative; }
-    .secondBox .swiper-container .prevLeft {
+    .secondBox .swiper-container .swiper-button-prev {
       position: absolute;
       height: 20px !important;
       width: 12px !important;
@@ -51,8 +51,13 @@ header > nav > .navR ul > li:hover > .secondBox {
       left: 10px;
       margin-top: -10px;
       height: 12px;
-      z-index: 5; }
-    .secondBox .swiper-container .nextRight {
+      z-index: 5;
+      background-image: url(../img/leftb.png);
+      background-size: 12px 20px; }
+    .secondBox .swiper-container .swiper-slide {
+      margin-left: 20px;
+      opacity: 0; }
+    .secondBox .swiper-container .swiper-button-next {
       position: absolute;
       height: 20px !important;
       top: 50%;
@@ -60,7 +65,9 @@ header > nav > .navR ul > li:hover > .secondBox {
       right: 10px;
       margin-top: -10px;
       height: 12px;
-      z-index: 5; }
+      z-index: 5;
+      background-image: url(../img/rightb.png);
+      background-size: 12px 20px; }
   .secondBox .imgContent {
     width: 200px;
     margin: 0 auto; }

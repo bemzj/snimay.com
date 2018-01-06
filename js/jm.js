@@ -209,4 +209,18 @@ $(function(){
 		$('.btnActive').removeClass('btnActive');
 		$(this).addClass('btnActive');
 	});
+	//键盘回车事件
+	$(document).keypress(function(event){    
+    	var keynum = (event.keyCode ? event.keyCode : event.which);    
+    	if(keynum == '13'){  
+    		if(searchFouce==true)
+    		{
+    			//光标在搜索框内
+    			console.log("光标在搜索框内");
+    		}else{
+    			//光标不在搜索框内
+    			console.log("光标不在搜索框内");
+    		}
+	    }
+	});
 });

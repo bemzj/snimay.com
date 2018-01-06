@@ -59,7 +59,8 @@ body{
             background-color: #eeeeee;
         }
         li.type{
-            
+            min-height: 58px;
+            height: auto;
             border: 1px solid transparent;
             .typeBox{
                 width: 598px;
@@ -68,9 +69,7 @@ body{
                 text-indent: 48px;
                 background-color: #eeeeee;
                 font-size: 14px;
-                position: absolute;
-                top: 0;
-                left: 0;
+                position: relative;
                 border: 1px solid #C8C8C8;
                 margin-left: -1px;
                 overflow: hidden;

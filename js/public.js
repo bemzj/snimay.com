@@ -1,3 +1,5 @@
+//搜索框全局变量
+var searchFouce = false;
 $(function(){
 	//微信特效
 	$('.wechat').mousemove(function(){
@@ -23,8 +25,28 @@ $(function(){
             scrollTop: 0
         }, 500); 
 	});
+	$('header nav .navR ul li').mouseenter(function(){
+		$('header nav .navR ul li').find('.swiper-slide').css({'margin-left': '20px','opacity':'0'});
+		$(this).find('.swiper-slide').stop().animate({'margin-left': '0px','opacity':'1'},750);
+            
+	})
+	//监听搜索框位置
 	
-	
+	$('.sword').focusin(function(){
+		searchFouce = true;
+	});
+	$('.sword').focusout(function(){
+		searchFouce = false;
+	});
+	$(document).keypress(function(event){    
+    	var keynum = (event.keyCode ? event.keyCode : event.which);    
+    	if(keynum == '13'){  
+    		if(searchFouce==true)
+    		{
+    			//输入框在搜索框内
+    		}       
+	    }
+	});
 });	
 function popWindow(titleCH,titleE,text1,text2){
 	/*

@@ -102,6 +102,7 @@ $(function(){
 		$('.proBlem').hide();
 		$('.suggest').hide();
 		$('.woWant').addClass('animated bounceInDown');
+		indexEvent = 1;
 	});
 	$('.iSuggest').click(function(){
 		$(this).addClass('wbtn');
@@ -111,6 +112,7 @@ $(function(){
 		$('.proBlem').hide();
 		$('.woWant').hide();
 		$('.suggest').addClass('animated bounceInUp');
+		indexEvent = 3;
 	});
 	$('.iProgrem').click(function(){
 		$(this).addClass('wbtn');
@@ -120,6 +122,31 @@ $(function(){
 		$('.woWant').hide();
 		$('.suggest').hide();
 		$('.proBlem').addClass('animated flipInY');
+		indexEvent = 2;
+	});
+	//回车事件监听
+	var indexEvent = 1;
+	$(document).keypress(function(event){    
+    	var keynum = (event.keyCode ? event.keyCode : event.which);    
+    	if(keynum == '13'){  
+    		if(searchFouce==true)
+    		{
+    			//输入框在搜索框内
+    		}else{
+    			switch(indexEvent)
+    			{
+    				case 1:
+    					console.log("1");
+    					break;
+    				case 2:
+    					console.log("2");
+    					break;
+    				case 3:
+    					console.log("3");
+    					break;
+    			}
+    		}
+	    }
 	});
 	//电话
 	var pt = 0;

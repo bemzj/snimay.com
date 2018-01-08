@@ -19,7 +19,8 @@
     border-bottom: 2px solid #a51e32; }
 
 header {
-  position: absolute; }
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5); }
 
 #businessCenter {
   width: 1200px;

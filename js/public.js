@@ -13,9 +13,9 @@ $(function(){
 	//出现回到顶部按钮
 	$(window).scroll(function(){
 		if($(window).scrollTop()>0){
-			$('#goToTop').slideDown();
+			$('#rightNav').slideDown();
 		}else{
-			$('#goToTop').slideUp();
+			$('#rightNav').slideUp();
 		}
 		
 	});

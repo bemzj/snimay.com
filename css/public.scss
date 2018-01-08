@@ -406,7 +406,8 @@ header{
     background-color: #FFFFFF;
     z-index: 999;
     box-shadow: 0 0 2px 2px rgba(153,153,153,0.2);
-    margin-top: -217px;
+    margin-top: -230px;
+    display: none;
     .rNavChild{
         width: 100%;
         ul li:nth-child(1){
@@ -459,6 +460,22 @@ header{
     }
     .rNavChild:nth-child(4) ul li:nth-child(1) a{
         background-position: -152px -312px;
+    }
+    #goToTop{
+        position: absolute;
+        left: 20px;
+        top: 420px;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        a{
+            display: block;
+            width: 40px;
+            img{
+                margin-top: -240px;
+                margin-left: -120px;
+            }
+        }
     }
 }
 footer{
@@ -632,23 +649,7 @@ footer{
         }
     }
 }
-#goToTop{
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    display: none;
-    a{
-        display: block;
-        width: 40px;
-        img{
-            margin-top: -240px;
-            margin-left: -120px;
-        }
-    }
-}
+
 
 .btn{
     width: 100%;

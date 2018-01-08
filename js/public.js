@@ -16,8 +16,7 @@ $(function(){
 			$('#rightNav').slideDown();
 		}else{
 			$('#rightNav').slideUp();
-		}
-		
+		}	
 	});
 	//回到顶部
 	$('#goToTop a').click(function(){

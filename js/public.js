@@ -47,6 +47,17 @@ $(function(){
     		}       
 	    }
 	});
+	//
+	$('header nav .navR ul .worda').mousemove(function(){
+		$('header nav .navR ul .worda').removeClass('nwhite');
+		$('header nav .navR ul .worda').removeClass('nRed');
+		$(this).addClass('nRed');
+		$(this).siblings('.worda').addClass('nwhite');
+	});
+	$('header nav .navR ul .worda').mouseleave(function(){
+		$('header nav .navR ul .worda').removeClass('nwhite');
+		$('header nav .navR ul .worda').removeClass('nRed');
+	});
 });	
 function popWindow(titleCH,titleE,text1,text2){
 	/*

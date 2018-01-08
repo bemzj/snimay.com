@@ -233,8 +233,12 @@ header {
         padding: 24px 5px; }
       header nav .navR ul li .imgBtn:before {
         content: none; }
-    header nav .navR ul li.nActive a {
+    header nav .navR ul li.nActive > a {
       color: #a51e32 !important; }
+    header nav .navR ul li.nwhite > a {
+      color: white !important; }
+    header nav .navR ul li.nRed > a {
+      color: white !important; }
     header nav .navR ul li:hover > a {
       color: #a51e32 !important; }
 

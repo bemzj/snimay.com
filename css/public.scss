@@ -308,8 +308,14 @@ header{
                     content: none;
                 }
             }
-            ul li.nActive a{
+            ul li.nActive>a{
                 color: $red!important;
+            }
+            ul li.nwhite>a{
+                color: white!important;
+            }
+            ul li.nRed>a{
+                color: white!important;
             }
             ul li:hover>a{
                 color: $red !important;

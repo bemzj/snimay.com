@@ -21,6 +21,12 @@
 header > nav > .navR ul > li:hover > .secondBox {
   height: 258px; }
 
+.linkBoxs a > img {
+  width: 32px !important; }
+
+.sBox a > img {
+  width: 32px !important; }
+
 .secondBox {
   position: absolute;
   top: 80px;

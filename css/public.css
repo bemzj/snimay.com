@@ -28,11 +28,7 @@ header > nav > .navR ul > li:hover > .secondBox {
   left: 0px;
   height: 0px;
   background-color: white;
-  overflow: hidden;
-  transition: height 0.25s linear;
-  -moz-transition: height 0.25s linear;
-  -webkit-transition: height 0.25s linear;
-  -ms-transition: height 0.25s linear; }
+  overflow: hidden; }
   .secondBox img {
     transition: width 1.0s,transform 0.5s;
     -moz-transition: width 1.0s,transform 0.5s;

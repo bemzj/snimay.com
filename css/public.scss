@@ -280,22 +280,22 @@ header{
                     position: relative;   
                     z-index: 5;             
                 }
-                >a:before{
-                    content: "";
-                    position: absolute;
-                    width: 0%;
-                    height: 100%;
-                    top: 0;
-                    left: 50%;
-                    background-color: $red;
-                    transition: left 0.25s,width 0.25s;
-                    -webkit-transition: left 0.25s,width 0.25s;
-                    -moz-transition: left 0.25s,width 0.25s;
-                    -ms-transition: left 0.25s,width 0.25s;
-                    z-index: -1;
-                }
+//              >a:before{
+//                  content: "";
+//                  position: absolute;
+//                  width: 0%;
+//                  height: 100%;
+//                  top: 0;
+//                  left: 50%;
+//                  background-color: $red;
+//                  transition: left 0.25s,width 0.25s;
+//                  -webkit-transition: left 0.25s,width 0.25s;
+//                  -moz-transition: left 0.25s,width 0.25s;
+//                  -ms-transition: left 0.25s,width 0.25s;
+//                  z-index: -1;
+//              }
                 >a:hover{
-                    color: white!important;
+                    color: $red !important;
                 }
                 >a:hover:before{
                     left: 0%;
@@ -312,7 +312,7 @@ header{
                 color: $red!important;
             }
             ul li:hover>a{
-                color: white!important;
+                color: $red !important;
             }
         }
         

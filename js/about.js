@@ -272,14 +272,14 @@ $(function(){
 				$('.profile').hide();
 				$('.net').hide();
 				$('.development').hide();
-				$('.honor').addClass('animated bounceInDown');
+				$('.honor').addClass('animated bounceInUp');
 				break;
 			case 3:
 				$('.net').show();
 				$('.profile').hide();
 				$('.honor').hide();
 				$('.development').hide();
-				$('.net').addClass('animated tada');
+				$('.net').addClass('animated bounceInUp');
 				if(mapExist==false){
 					mapExist = true;
 					var c = Raphael("map_container", 600, 600);

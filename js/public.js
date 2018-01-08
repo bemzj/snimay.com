@@ -93,7 +93,7 @@ var swiper = new Swiper('.swiper-container-nav', {
         slidesPerView: 4,
         paginationClickable: true,
         spaceBetween: 0,
-        loop:true,
         prevButton:'.prevLeft',
 		nextButton:'.nextRight',
+		
     });

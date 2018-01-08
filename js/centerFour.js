@@ -20,7 +20,7 @@ $(function(){
 				$('.videoCenter').hide();
 				$('.company').hide();
 				$('.email').hide();
-				$('.media').addClass('animated bounceInDown');
+				$('.media').addClass('animated bounceInUp');
 				break;
 			case 2:
 				$('.videoCenter').show();
@@ -35,7 +35,7 @@ $(function(){
 				$('.videoCenter').hide();
 				$('.company').hide();
 				$('.media').hide();
-				$('.email').addClass('animated bounceInDown');
+				$('.email').addClass('animated bounceInUp');
 				break;
 		}
 	});
@@ -45,7 +45,7 @@ $(function(){
 		$('.media').show();
 		$('#details').hide();
 		$('.newsD').hide();
-		$('.media').addClass('animated bounceInDown');
+		$('.media').addClass('animated bounceInUp');
 	});
 	//查看详情
 	$('.readMore').click(function(){
@@ -53,7 +53,7 @@ $(function(){
 		$('.media').hide();
 		$('#details').show();
 		$('.newsD').show();
-		$('.newsD').addClass('animated tada');
+		$('.newsD').addClass('animated bounceInUp');
 	});
 	//电子报刊
 	$('.emailReturn').click(function(){
@@ -62,31 +62,6 @@ $(function(){
 		$('#details').hide();
 		$('.emailDetails').hide();
 		$('.email').addClass('animated bounceInUp');
-	});
-	//播放视频
-	var myPlayer1 = videojs('my-video1');
-	videojs("my-video1").ready(function(){
-		var myPlayer = this;
-		$('.pVideo1').click(function(){
-			myPlayer.play();
-			$(this).hide();
-		});
-	});
-	var myPlayer2 = videojs('my-video2');
-	videojs("my-video2").ready(function(){
-		var myPlayer = this;
-		$('.pVideo2').click(function(){
-			myPlayer.play();
-			$(this).hide();
-		});
-	});
-	var myPlayer3 = videojs('my-video3');
-	videojs("my-video3").ready(function(){
-		var myPlayer = this;
-		$('.pVideo3').click(function(){
-			myPlayer.play();
-			$(this).hide();
-		});
 	});
 	var first = false;
 	//查看电子报刊详情

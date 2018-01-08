@@ -29,22 +29,12 @@ body {
         margin: 20px;
         position: relative;
         overflow: hidden; }
-        #news .newsList .newsBox .nImg video {
+        #news .newsList .newsBox .nImg iframe {
           width: 100%;
           height: 100%; }
-        #news .newsList .newsBox .nImg a {
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: 100%;
+        #news .newsList .newsBox .nImg embed {
           width: 100%;
-          height: 100%;
-          transition: bottom 0.5s;
-          -ms-transition: bottom 0.5s;
-          -moz-transition: bottom 0.5s;
-          -webkit-transition: bottom 0.5s;
-          background: url(../img/redCrocss.png) no-repeat center center;
-          background-color: rgba(0, 0, 0, 0.75); }
+          height: 100%; }
       #news .newsList .newsBox .nIntro {
         text-align: center;
         margin-top: 40px; }

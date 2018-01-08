@@ -440,9 +440,6 @@ header{
         ul li:nth-child(1) a:hover img{
             transform: rotate(360deg);
         }
-        ul li:nth-child(1) a:hover+p{
-            font-size: 16px;
-        }
         ul li:nth-child(2){
             overflow: hidden;
             width: 80px;

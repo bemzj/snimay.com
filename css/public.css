@@ -344,8 +344,6 @@ header {
       -ms-transition: font-size 0.5s linear; }
     #rightNav .rNavChild ul li:nth-child(1) a:hover img {
       transform: rotate(360deg); }
-    #rightNav .rNavChild ul li:nth-child(1) a:hover + p {
-      font-size: 16px; }
     #rightNav .rNavChild ul li:nth-child(2) {
       overflow: hidden;
       width: 80px;

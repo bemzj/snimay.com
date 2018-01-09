@@ -218,10 +218,10 @@ header {
     margin: 0 auto; }
     header nav .logoL a {
       display: block;
-      height: 26px;
-      padding: 27px 0px; }
+      height: 35px;
+      padding: 20px 0px; }
       header nav .logoL a img {
-        height: 26px;
+        height: 35px;
         width: auto !important; }
     header nav .navR ul li {
       float: left; }
@@ -409,7 +409,8 @@ footer {
       width: 950px; }
       footer .fMiddle .fMLeft .allServer {
         width: 158.3333px;
-        float: left; }
+        float: left;
+        padding-left: 20px; }
         footer .fMiddle .fMLeft .allServer ul li p {
           color: #888888;
           line-height: 30px;
@@ -443,10 +444,10 @@ footer {
         border: 1px solid #c8c8c8;
         color: #a51e32;
         font-family: arial;
-        transition: font-size 0.5s linear;
-        -moz-transition: font-size 0.5s linear;
-        -webkit-transition: font-size 0.5s linear;
-        -ms-transition: font-size 0.5s linear; }
+        transition: font-size 0.25s linear;
+        -moz-transition: font-size 0.25s linear;
+        -webkit-transition: font-size 0.25s linear;
+        -ms-transition: font-size 0.25s linear; }
       footer .fMiddle .fMRight ul li:nth-child(2n) > p:hover {
         font-size: 20px; }
       footer .fMiddle .fMRight ul li:nth-child(1) > p {

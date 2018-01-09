@@ -270,10 +270,10 @@ header{
             
             a{
                 display: block;
-                height: 26px;
-                padding: 27px 0px;
+                height: 35px;
+                padding: 20px 0px;
                 img{
-                    height: 26px;
+                    height: 35px;
                     width: auto!important;
                 }
             }
@@ -523,6 +523,7 @@ footer{
             .allServer{
                 width: 158.3333px;
                 float: left;
+                padding-left: 20px;//默认为0px
                 ul li {
                     p {
                         color: #888888;
@@ -565,10 +566,10 @@ footer{
                 border: 1px solid #c8c8c8;
                 color: $red;
                 font-family: arial;
-                transition: font-size 0.5s linear;
-                -moz-transition:font-size 0.5s linear;
-                -webkit-transition:font-size 0.5s linear;      
-                -ms-transition:font-size 0.5s linear;
+                transition: font-size 0.25s linear;
+                -moz-transition:font-size 0.25s linear;
+                -webkit-transition:font-size 0.25s linear;      
+                -ms-transition:font-size 0.25s linear;
             }
             ul li:nth-child(2n)>p:hover{
                 font-size: 20px;

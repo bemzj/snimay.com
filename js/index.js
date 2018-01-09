@@ -35,6 +35,25 @@ $(function(){
 	       }
 	    }
 	});  
+	//实例化轮播图
+	var mySwiperImage = new Swiper('.swiper-container-image', {
+		loop: true,
+		pagination: '.swiper-pagination',
+		paginationClickable :true,
+		autoplayDisableOnInteraction : false,
+		paginationBulletRender: function (swiper, index,className) {
+		    return '<span class="' + className + '">0' + (index + 1) + '</span>';
+		    
+		},
+		autoplay:5000,
+		onInit: function(swiper){
+			//添加分页标签
+			for(i=0;i<$('.swiper-pagination span').length;i++)
+			{
+				$('.swiper-pagination span').eq(i).text('0'+(i+1));
+			}	
+		},
+	}); 
 	//业务中心
 	$('.moreFun').mouseover(function(){
 		$(this).find('a').stop().animate({'top':'0%'},100);

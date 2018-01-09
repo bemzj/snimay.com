@@ -67,14 +67,14 @@
       font-size: 22px;
       text-align: center;
       color: #888888;
-      padding: 45px 0 25px; }
+      padding: 145px 0 25px; }
     .serverBox .sBLeft .radioChoices {
       width: 600px;
-      height: 60px;
+      height: auto;
       position: relative;
       margin: 0 auto; }
     .serverBox .sBLeft .radioBox {
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       width: 600px;
@@ -147,17 +147,17 @@
       overflow: hidden;
       border: 1px solid #c8c8c8;
       margin: 0 auto;
-      margin-top: 10px;
+      margin-top: 15px;
       position: relative; }
-      .serverBox .sBLeft .oneInput p {
+      .serverBox .sBLeft .oneInput > p {
         position: absolute;
         left: 0;
         top: 0;
         width: 90px;
         margin-left: 19px;
-        line-height: 60px;
+        line-height: 58px;
         color: #888888; }
-        .serverBox .sBLeft .oneInput p span {
+        .serverBox .sBLeft .oneInput > p span {
           color: #a51e32; }
       .serverBox .sBLeft .oneInput input {
         width: 460px;
@@ -167,6 +167,26 @@
         margin-top: 1px;
         line-height: 58px;
         color: #333333; }
+      .serverBox .sBLeft .oneInput .threeCity {
+        width: 460px;
+        margin-left: 110px; }
+        .serverBox .sBLeft .oneInput .threeCity > .floatl {
+          border: 1px solid #c8c8c8;
+          width: 145px;
+          height: 50px;
+          margin-top: 4px;
+          color: #333333;
+          margin-right: 10px;
+          background: url(../img/ms.png) no-repeat 105px center; }
+          .serverBox .sBLeft .oneInput .threeCity > .floatl > p {
+            line-height: 50px;
+            text-indent: 20px;
+            cursor: pointer;
+            cursor: -ms-pointer; }
+        .serverBox .sBLeft .oneInput .threeCity > .floatl:nth-last-child(2) {
+          margin-right: 0px; }
+    .serverBox .sBLeft .cone {
+      overflow: visible; }
     .serverBox .sBLeft .textarea {
       width: 600px;
       height: 180px;
@@ -196,7 +216,7 @@
     .serverBox .sBLeft .btnBox {
       width: 600px;
       margin: 0 auto;
-      margin-top: 10px;
+      margin-top: 15px;
       margin-bottom: 10px; }
     .serverBox .sBLeft .file {
       width: 600px;
@@ -243,6 +263,63 @@
         color: #888888; }
   .serverBox .sBRight {
     width: 500px; }
+
+.serverBox .sBLeft .proBlem .title {
+  padding-top: 45px; }
+
+.serverBox .sBLeft .suggest .title {
+  padding-top: 95px; }
+
+body {
+  background-color: white; }
+
+#fourp {
+  width: 100%;
+  background-color: white; }
+  #fourp .netNavs {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 20px; }
+    #fourp .netNavs ul li {
+      float: left;
+      margin-right: 13px; }
+      #fourp .netNavs ul li button {
+        width: 290px;
+        height: 58px;
+        border: 1px solid #dddddd;
+        font-size: 18px;
+        color: #888888;
+        position: relative;
+        -moz-transition: color 0.2s, border 0.2s;
+        -webkit-transition: color 0.2s, border 0.2s;
+        -ms-transition: color 0.2s, border 0.2s;
+        transition: color 0.2s, border 0.2s; }
+      #fourp .netNavs ul li button::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        width: 0px;
+        border-bottom: 1.1px solid #a51e32;
+        -moz-transition: width 0.2s;
+        -webkit-transition: width 0.2s;
+        -ms-transition: width 0.2s;
+        transition: width 0.2s; }
+      #fourp .netNavs ul li .btnActive {
+        border: 1px solid #C8C8C8;
+        box-shadow: 0 0 2px 2px rgba(231, 231, 231, 0.4);
+        color: #a51e32; }
+      #fourp .netNavs ul li button:hover {
+        border: 1px solid #C8C8C8;
+        box-shadow: 0 0 2px 2px rgba(231, 231, 231, 0.4);
+        color: #a51e32; }
+      #fourp .netNavs ul li .btnActive::after {
+        width: 290px; }
+      #fourp .netNavs ul li button:hover::after {
+        width: 290px; }
+    #fourp .netNavs ul li:last-child {
+      margin-right: 0px; }
 
 #contact {
   width: 100%;
@@ -446,7 +523,8 @@
 #tenServer {
   width: 100%;
   margin: 0 auto;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding-top: 150px; }
   #tenServer .tenVideoOut {
     width: 1200px;
     margin: 0 auto;
@@ -587,5 +665,47 @@
   width: 100% !important;
   height: 90% !important;
   padding-top: 0 !important; }
+
+.proviceBox {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 540px;
+  padding-bottom: 10px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(51, 51, 51, 0.2);
+  z-index: 10; }
+  .proviceBox .list {
+    text-indent: 0px;
+    line-height: 28px; }
+    .proviceBox .list .lLeft {
+      width: 40px;
+      text-align: center;
+      font-size: 14px; }
+    .proviceBox .list .lRight {
+      width: 500px; }
+      .proviceBox .list .lRight .floatl {
+        min-width: 100px;
+        font-size: 12px;
+        text-align: center;
+        color: #333333;
+        margin: 0; }
+        .proviceBox .list .lRight .floatl a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: #333333; }
+        .proviceBox .list .lRight .floatl a:hover {
+          color: #a51e32; }
+  .proviceBox > p {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #a51e32;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    text-indent: 0px;
+    margin-bottom: 10px;
+    color: #a51e32; }
 
 /*# sourceMappingURL=server.css.map */

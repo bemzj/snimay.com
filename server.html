@@ -73,8 +73,28 @@
 		<!--轮播图-->
 			<img src="img/serverBanner.jpg" />
 		</div>
+		<!--四个选择-->
+		<div id="fourp">
+			<div class="netNavs">
+				<ul>
+					<li>
+						<button class="btnActive" eq='0'>联系我们</button>
+					</li>
+					<li>
+						<button eq='1'>问题反馈</button>
+					</li>
+					<li>
+						<button eq='2'>定制流程</button>
+					</li>
+					<li>
+						<button eq='3'>10环服务</button>
+					</li>
+				</ul>
+				<div class="clearl"></div>
+			</div>
+		</div>
 		<!--联系我们-->
-		<div id="contact" style="display: none;">
+		<div id="contact">
 			<div class="contact">
 				<div class="bigTitle">
 					<ul>
@@ -195,7 +215,7 @@
 			
 		</div>
 		<!--服务-->
-		<div id="server">
+		<div id="server"  style="display: none;">
 			<div class="choice">
 				<ul>
 					<li>
@@ -247,36 +267,28 @@
 									<div class="clearl"></div>
 								</div>
 							</div>
-							
-							<div class="twoInput">
-								<div class="twoInputIn floatl">
-									<p><span>*</span>客户姓名：</p>
-									<input type="text" />
-								</div>
-								<div class="twoInputIn floatl">
-									<p><span>*</span>手机号码：</p>
-									<input type="text" maxlength="11" />
-								</div>
-								<div class="clearl"></div>
-							</div>
-							<div class="twoInput">
-								<div class="twoInputIn floatl">
-									<p><span>*</span>购买城市：</p>
-									<input type="text" id="city" />
-								</div>
-								<div class="twoInputIn floatl">
-									<p><span>*</span>联系时间：</p>
-									<input type="text" class="date" />
-								</div>
-								<div class="clearl"></div>
-							</div>
 							<div class="oneInput">
-								<p><span>*</span>安装地址：</p>
+								<p><span>*</span>客户姓名：</p>
 								<input type="text" />
 							</div>
-							<div class="textarea">
-								<p><span>*</span>留言备注：</p>
-								<textarea></textarea>
+							<div class="oneInput">
+								<p><span>*</span>手机号码：</p>
+								<input type="text" />
+							</div>
+							<div class="oneInput cone">
+								<p><span>*</span>购买城市：</p>
+								<div class="threeCity">
+									<div class="floatl area1">
+										<p>请选择省</p>
+									</div>
+									<div class="floatl area2">
+										<p>请选择市</p>
+									</div>
+									<div class="floatl area3">
+										<p>请选择区</p>
+									</div>
+									<div class="clearl"></div>
+								</div>
 							</div>
 							<div class="btnBox">
 								<button class="btn">提交</button>
@@ -328,20 +340,20 @@
 								</div>
 								<div class="clearl"></div>
 							</div>
-							<div class="twoInput">
-								<div class="twoInputIn floatl">
-									<p><span>*</span>购买城市：</p>
-									<input type="text" id="cityP" />
+							<div class="oneInput cone">
+								<p><span>*</span>购买城市：</p>
+								<div class="threeCity">
+									<div class="floatl area11">
+										<p>请选择省</p>
+									</div>
+									<div class="floatl area22">
+										<p>请选择市</p>
+									</div>
+									<div class="floatl area33">
+										<p>请选择区</p>
+									</div>
+									<div class="clearl"></div>
 								</div>
-								<div class="twoInputIn floatl">
-									<p><span>*</span>联系时间：</p>
-									<input type="text" class="dateT"/>
-								</div>
-								<div class="clearl"></div>
-							</div>
-							<div class="oneInput">
-								<p><span>*</span>安装地址：</p>
-								<input type="text" />
 							</div>
 							<div class="textarea">
 								<p><span>*</span>问题描述：</p>
@@ -369,9 +381,20 @@
 								<p><span>*</span>联系方式：</p>
 								<input type="text" />
 							</div>
-							<div class="oneInput">
-								<p><span>*</span>所在城市：</p>
-								<input type="text" />
+							<div class="oneInput cone">
+								<p><span>*</span>购买城市：</p>
+								<div class="threeCity">
+									<div class="floatl area111">
+										<p>请选择省</p>
+									</div>
+									<div class="floatl area222">
+										<p>请选择市</p>
+									</div>
+									<div class="floatl area333">
+										<p>请选择区</p>
+									</div>
+									<div class="clearl"></div>
+								</div>
 							</div>
 							<div class="textarea">
 								<p><span>*</span>留言备注：</p>
@@ -1002,8 +1025,6 @@
 
 		<script type="text/javascript" src="lib/layui.js" ></script>
 		<script type="text/javascript" src="js/ydui.citys.js" ></script>
-		<script type="text/javascript" src="js/ydui.flexible.js" ></script>
-		<script type="text/javascript" src="js/ydui.js" ></script>
 		<script type="text/javascript" src="js/public.js" ></script>
 		<script type="text/javascript" src="js/server.js" ></script>		
 	</body>

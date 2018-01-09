@@ -47,36 +47,7 @@ $(function(){
 		    layer.msg(JSON.stringify(data.field));
 		    return false;
 		  });
-		});
-	//省市区
-	!function () {
-        var $target = $('#city');
-
-        $target.citySelect();
-
-        $target.on('click', function (event) {
-            event.stopPropagation();
-            $target.citySelect('open');
-        });
-
-        $target.on('done.ydui.cityselect', function (ret) {
-            $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
-        });
-    }();
-    !function () {
-        var $target = $('#cityP');
-
-        $target.citySelect();
-
-        $target.on('click', function (event) {
-            event.stopPropagation();
-            $target.citySelect('open');
-        });
-
-        $target.on('done.ydui.cityselect', function (ret) {
-            $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
-        });
-    }();
+	});
     $('#city').focus(function(){
 		$(this).blur();
 	});
@@ -195,7 +166,313 @@ $(function(){
 	//弹窗
 //	popWindow("信息提醒","Information to remind","您的反馈意见已经发送成功。",'感谢您对诗尼曼的支持！');
 	//播放视频
-	
+	function getProvince(target,label){
+		/* 
+		 * target为父级
+		 * label为装子级的东西
+		 */
+		var html = "";
+		html += '<div class="proviceBox"><p>省份</p>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>A-G</p></div><div class="lRight  floatl lr1"></div></div><div class="clearl"></div>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>H-K</p></div><div class="lRight  floatl lr2"></div></div><div class="clearl"></div>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>L-S</p></div><div class="lRight  floatl lr3"></div></div><div class="clearl"></div>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>T-Z</p></div><div class="lRight  floatl lr4"></div></div><div class="clearl"></div>';
+		html +=	'</div>';
+		$(target).append(html);
+		for(var i=0;i<citys.length;i++)
+		{
+			switch(i)
+			{
+				case 0:
+				case 3:
+				case 13:
+				case 15:
+				case 18:
+				case 19:
+				case 23:
+				case 27:
+				case 32:
+					$('.lr1').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+				break;
+				case 4:
+				case 6:
+				case 8:
+				case 9:
+				case 11:
+				case 16:
+				case 17:
+				case 20:
+				case 21:
+				case 33:
+					$('.lr2').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+				break;
+				case 1:
+				case 5:
+				case 7:
+				case 10:
+				case 12:
+				case 21:
+				case 26:
+				case 28:
+				case 29:
+					$('.lr3').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+				break;
+				case 2:
+				case 14:
+				case 24:
+				case 25:
+				case 30:
+				case 31:
+				
+					$('.lr4').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+				break;
+			}
+			
+		}
+		$('.proviceBox a').click(function(){
+			$(target).children(label).html($(this).html());
+			$('.proviceBox').remove();
+			$(target).addClass('zjProvice');
+			$(target).attr('provice',$(this).attr('c'));
+		});
+	}
+	$('.area11>p').click(function(){
+		$('.proviceBox').remove();
+		$('.area11').removeAttr('provice');
+		$('.area22').removeAttr('city');
+		$('.area33').removeAttr('area');
+		getProvince('.area11','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择省");
+		$('.area22>p').html("请选择市");
+		$('.area33>p').html("请选择区");		
+	});
+	$('.area22>p').click(function(){
+		$('.area22').removeAttr('city');
+		$('.area33').removeAttr('area');
+		$('.proviceBox').remove();
+		getCity('.area22','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择市");
+		$('.area33>p').html("请选择区");
+	});
+	$('.area33>p').click(function(){
+		$('.area33').removeAttr('area');
+		$('.proviceBox').remove();
+		$(this).html("请选择区");
+		getArea('.area33','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+	});
+	$('.area1>p').click(function(){
+		$('.proviceBox').remove();
+		$('.area1').removeAttr('provice');
+		$('.area2').removeAttr('city');
+		$('.area3').removeAttr('area');
+		getProvince('.area1','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择省");
+		$('.area2>p').html("请选择市");
+		$('.area3>p').html("请选择区");		
+	});
+	$('.area2>p').click(function(){
+		$('.area2').removeAttr('city');
+		$('.area3').removeAttr('area');
+		$('.proviceBox').remove();
+		getCity('.area2','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择市");
+		$('.area3>p').html("请选择区");
+	});
+	$('.area3>p').click(function(){
+		$('.area3').removeAttr('area');
+		$('.proviceBox').remove();
+		$(this).html("请选择区");
+		getArea('.area3','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+	});
+	$('.area111>p').click(function(){
+		$('.proviceBox').remove();
+		$('.area111').removeAttr('provice');
+		$('.area222').removeAttr('city');
+		$('.area333').removeAttr('area');
+		getProvince('.area111','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择省");
+		$('.area222>p').html("请选择市");
+		$('.area333>p').html("请选择区");		
+	});
+	$('.area222>p').click(function(){
+		$('.area222').removeAttr('city');
+		$('.area333').removeAttr('area');
+		$('.proviceBox').remove();
+		getCity('.area222','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择市");
+		$('.area333>p').html("请选择区");
+	});
+	$('.area333>p').click(function(){
+		$('.area333').removeAttr('area');
+		$('.proviceBox').remove();
+		$(this).html("请选择区");
+		getArea('.area333','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+	});
+	function getCity(target,label){
+		var html = "";
+		html += '<div class="proviceBox"><p>市</p>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>A-G</p></div><div class="lRight  floatl lr"></div></div><div class="clearl"></div>	</div>';
+		html +=	'</div>';
+		$(target).append(html);
+		$('.proviceBox').width(500);
+		$('.proviceBox .lLeft').remove();
+		var index = $('.zjProvice').attr('provice');
+		if(typeof index == 'undefined'){
+			$('.lr').prepend('<div class="floatl" style="width:100%"><a href="###">'+"请先选择省份"+'</a></div>');
+			$('.proviceBox a').click(function() {
+				$('.proviceBox').remove();
+			});
+		}else{
+			if(index < 4) {
+				$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[index].n + '</a></div>');
+			} else if(index < 34) {
+				for(var i = 0; i < citys[index].c.length; i++) {
+					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[index].c[i].n + '</a></div>');
+				}
+			};
+			$('.lr1').append('<div class="clearl">');
+			$('.proviceBox a').click(function() {
+				$(target).children(label).html($(this).html());
+				$('.proviceBox').remove();
+				$(target).addClass('zjCity');
+				$(target).attr('city', $(this).attr('c'));
+			});
+		} 
+	}
+	function getArea(target,label){
+		var html = "";
+		html += '<div class="proviceBox"><p>区</p>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>A-G</p></div><div class="lRight  floatl lr"></div></div><div class="clearl"></div>	</div>';
+		html +=	'</div>';
+		$(target).append(html);
+		$('.proviceBox').width(500);
+		$('.proviceBox .lLeft').remove();
+		var indexp = $('.zjProvice').attr('provice');
+		var indexc = $('.zjCity').attr('city');
+		if(typeof indexc == 'undefined' || typeof indexp == 'undefined' ){
+			$('.lr').prepend('<div class="floatl" style="width:100%"><a href="###">'+"请先选择省区或市区"+'</a></div>');
+			$('.proviceBox a').click(function() {
+				$('.proviceBox').remove();
+			});
+		}else{
+			if(indexp < 4) {
+				for(var i=0;i<citys[indexp].c.length;i++)
+				{
+					$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[i].n + '</a></div>');
+				}
+				
+			} else if(indexp < 34) {
+				for(var i = 0; i < citys[indexp].c[indexc].a.length; i++) {
+					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[indexc].a[i] + '</a></div>');
+				}
+			};
+			$('.lr1').append('<div class="clearl">');
+			$('.proviceBox a').click(function() {
+				$(target).children(label).html($(this).html());
+				$('.proviceBox').remove();
+				$(target).attr('area', $(this).attr('c'));
+			});
+		} 
+	}
 	//播放视频
 	var myPlayer1 = videojs('my-video1');
 	videojs("my-video1").ready(function(){
@@ -204,6 +481,54 @@ $(function(){
 			myPlayer.play();
 			$('.playVideo').hide();
 		});
+	});
+	
+	$('.netNavs ul li button').click(function(){
+		$(this).addClass('btnActive');
+		$(this).parent('li').siblings('li').find('button').removeClass('btnActive');
+		var eq; 
+		eq= parseInt($(this).attr('eq'));
+		if(eq==1)
+		{
+			$('body').css('background-color','#EEEEEE');
+			$('#fourp').css('background-color','#EEEEEE');
+			
+		}else{
+			$('body').css('background-color','white');
+			$('#fourp').css('background-color','white');
+			
+		}
+		switch(eq)
+		{
+			case 0:
+				$('#contact').show();
+				$('#server').hide();
+				$('#specialServer').hide();
+				$('#tenServer').hide();
+				$('#contact').addClass('animated bounceInUp');
+				break;
+			case 1:
+				$('#contact').hide();
+				$('#server').show();
+				$('#specialServer').hide();
+				$('#tenServer').hide();
+				$('#server').addClass('animated bounceInUp');
+				break;
+			case 2:
+				$('#contact').hide();
+				$('#server').hide();
+				$('#specialServer').show();
+				$('#tenServer').hide();
+				$('#specialServer').addClass('animated bounceInUp');
+				break;
+			case 3:
+				$('#contact').hide();
+				$('#server').hide();
+				$('#specialServer').hide();
+				$('#tenServer').show();
+				$('#tenServer').addClass('animated bounceInUp');
+				break;
+		}
 	});
 });
 var map = new AMap.Map('companyMap', {

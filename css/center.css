@@ -7,8 +7,7 @@ header {
 #bannerNext {
   width: 1200px;
   position: relative;
-  margin: 0 auto;
-  overflow: hidden; }
+  margin: 0 auto; }
   #bannerNext img {
     width: 100%; }
   #bannerNext .swiper-pagination-bullet {
@@ -30,15 +29,15 @@ header {
     width: 38.42%;
     height: 520px;
     background-color: #eeeeee; }
-    #bannerNext > div:nth-child(2) ul li:nth-child(1) {
+    #bannerNext > div:nth-child(2) > ul > li:nth-child(1) {
       position: relative;
       width: 100%;
       margin-bottom: 41px; }
-      #bannerNext > div:nth-child(2) ul li:nth-child(1) > img {
+      #bannerNext > div:nth-child(2) > ul > li:nth-child(1) > img {
         position: relative;
         top: 0;
         left: 0; }
-      #bannerNext > div:nth-child(2) ul li:nth-child(1) p {
+      #bannerNext > div:nth-child(2) > ul > li:nth-child(1) p {
         position: absolute;
         font-size: 22px;
         line-height: 150px;
@@ -48,50 +47,64 @@ header {
         top: 0;
         left: 0;
         font-weight: bold; }
-    #bannerNext > div:nth-child(2) ul li {
+    #bannerNext > div:nth-child(2) > ul > li {
       position: relative;
       width: 380px;
       margin: 0 auto;
       margin-bottom: 10px;
       overflow: hidden; }
-      #bannerNext > div:nth-child(2) ul li > div {
+      #bannerNext > div:nth-child(2) > ul > li > div {
         position: absolute;
         left: 12px;
         top: 23px;
         width: 12px;
         height: 12px;
         overflow: hidden; }
-        #bannerNext > div:nth-child(2) ul li > div img {
+        #bannerNext > div:nth-child(2) > ul > li > div img {
           width: auto;
           margin-left: -212px; }
-      #bannerNext > div:nth-child(2) ul li .phone {
+      #bannerNext > div:nth-child(2) > ul > li .phone {
         width: 15px;
         height: 15px; }
-        #bannerNext > div:nth-child(2) ul li .phone img {
+        #bannerNext > div:nth-child(2) > ul > li .phone img {
           margin-left: -212px;
           margin-top: -48px; }
-      #bannerNext > div:nth-child(2) ul li .cityes {
-        width: 13px;
-        height: 13px; }
-        #bannerNext > div:nth-child(2) ul li .cityes img {
-          margin-top: -95px;
-          margin-left: -210px; }
-      #bannerNext > div:nth-child(2) ul li .word {
+      #bannerNext > div:nth-child(2) > ul > li .cityes {
+        width: 124px;
+        height: 58px;
+        margin-right: 3px;
+        overflow: visible;
+        background: url(../img/ms.png) no-repeat 95px center;
+        background-color: white;
+        background-size: 14px auto; }
+        #bannerNext > div:nth-child(2) > ul > li .cityes > p {
+          width: 124px;
+          text-indent: 20px;
+          height: 58px;
+          font-size: 14px;
+          line-height: 58px;
+          border: 1px solid #c8c8c8;
+          color: #333333;
+          cursor: pointer;
+          cursor: -ms-pointer; }
+      #bannerNext > div:nth-child(2) > ul > li .cityes:nth-last-child(2) {
+        margin-right: 0px; }
+      #bannerNext > div:nth-child(2) > ul > li .word {
         margin-left: 0px; }
-      #bannerNext > div:nth-child(2) ul li input {
+      #bannerNext > div:nth-child(2) > ul > li input {
         width: 378px;
         height: 58px;
         border: 1px solid #c8c8c8;
         background-color: white;
         color: #333333;
         text-indent: 33px; }
-      #bannerNext > div:nth-child(2) ul li input::-ms-input-placeholder {
+      #bannerNext > div:nth-child(2) > ul > li input::-ms-input-placeholder {
         color: #888888; }
-      #bannerNext > div:nth-child(2) ul li input::-webkit-input-placeholder {
+      #bannerNext > div:nth-child(2) > ul > li input::-webkit-input-placeholder {
         color: #888888; }
-      #bannerNext > div:nth-child(2) ul li input::-moz-placeholder {
+      #bannerNext > div:nth-child(2) > ul > li input::-moz-placeholder {
         color: #888888; }
-      #bannerNext > div:nth-child(2) ul li button {
+      #bannerNext > div:nth-child(2) > ul > li button {
         position: absolute;
         left: 0;
         top: 0;
@@ -103,17 +116,13 @@ header {
         text-align: center;
         line-height: 58px;
         background-color: white;
-        z-index: 5;
-        -moz-transition: color 0.5s,border 0.5s;
-        -webkit-transition: color 0.5s,border 0.5s;
-        -ms-transition: color 0.5s,border 0.5s;
-        transition: color 0.5s,border 0.5s; }
-      #bannerNext > div:nth-child(2) ul li button:hover::before {
+        z-index: 5; }
+      #bannerNext > div:nth-child(2) > ul > li button:hover::before {
         width: 100%; }
-      #bannerNext > div:nth-child(2) ul li button:hover {
+      #bannerNext > div:nth-child(2) > ul > li button:hover {
         color: white;
         border: 1px solid #a51e32; }
-      #bannerNext > div:nth-child(2) ul li button::before {
+      #bannerNext > div:nth-child(2) > ul > li button::before {
         content: "";
         position: absolute;
         top: 0;
@@ -121,19 +130,16 @@ header {
         z-index: -1;
         width: 0%;
         height: 100%;
-        background-color: #a51e32;
-        -moz-transition: width 0.5s;
-        -webkit-transition: width 0.5s;
-        -ms-transition: width 0.5s;
-        transition: width 0.5s; }
-    #bannerNext > div:nth-child(2) ul li:nth-child(5) {
+        background-color: #a51e32; }
+    #bannerNext > div:nth-child(2) > ul > li:nth-child(5) {
       width: 378px;
       height: 58px;
       position: relative;
       margin-top: 19px; }
-    #bannerNext > div:nth-child(2) ul li.city input {
-      background: url(../img/ms.png) no-repeat 340px center;
-      background-color: white; }
+    #bannerNext > div:nth-child(2) > ul > li.city {
+      overflow: visible; }
+      #bannerNext > div:nth-child(2) > ul > li.city .clearl {
+        height: 0; }
 
 header {
   position: relative; }
@@ -154,7 +160,9 @@ header {
       border-right: 1px solid transparent; }
     .shopShow .sNav div:nth-child(2) ul li {
       padding: 9px 0px;
-      float: left; }
+      float: left;
+      border-radius: 5px;
+      overflow: hidden; }
       .shopShow .sNav div:nth-child(2) ul li a {
         padding: 0 20px;
         border-right: 1px solid #c8c8c8;
@@ -235,11 +243,7 @@ header {
         width: 0%;
         left: 0;
         bottom: -2px;
-        border-bottom: 1px solid #a51e32;
-        -moz-transition: width 0.5s;
-        -webkit-transition: width 0.5s;
-        -ms-transition: width 0.5s;
-        transition: width 0.5s; }
+        border-bottom: 1px solid #a51e32; }
       .shopShow .contentBox .cRight .cRightList {
         padding: 26px 0 25px;
         border-bottom: 1px solid #eeeeee;
@@ -319,5 +323,52 @@ header {
 
 .sRoom {
   padding-bottom: 80px; }
+
+#bannerNext > div:nth-child(2) ul .city > div {
+  position: relative;
+  left: 0;
+  top: 0; }
+
+.proviceBox {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 540px;
+  padding-bottom: 10px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(51, 51, 51, 0.2);
+  z-index: 10; }
+  .proviceBox .list {
+    text-indent: 0px;
+    line-height: 28px; }
+    .proviceBox .list .lLeft {
+      width: 40px;
+      text-align: center;
+      font-size: 14px; }
+    .proviceBox .list .lRight {
+      width: 500px; }
+      .proviceBox .list .lRight .floatl {
+        min-width: 100px;
+        font-size: 12px;
+        text-align: center;
+        color: #333333;
+        margin: 0; }
+        .proviceBox .list .lRight .floatl a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: #333333; }
+        .proviceBox .list .lRight .floatl a:hover {
+          color: #a51e32; }
+  .proviceBox > p {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #a51e32;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    text-indent: 0px;
+    margin-bottom: 10px;
+    color: #a51e32; }
 
 /*# sourceMappingURL=center.css.map */

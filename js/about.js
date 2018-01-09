@@ -208,10 +208,10 @@ $(function(){
 		$(this).parent('li').siblings('li').find('button').removeClass('btnActive');
 		var eq; 
 		eq= parseInt($(this).attr('eq'));
-		
 		switch(eq)
 		{
 			case 0:
+			
 				$('.profile').show();
 				$('.honor').hide();
 				$('.net').hide();

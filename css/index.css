@@ -40,10 +40,12 @@ header nav .navR ul li:hover > a > p {
   text-shadow: 3px 1px 2px transparent; }
 
 .linkBoxs a > img {
-  height: 38px; }
+  width: 38px !important;
+  height: 38px !important; }
 
 .sBox a > img {
-  height: 38px; }
+  width: 38px !important;
+  height: 38px !important; }
 
 #businessCenter {
   width: 1200px;

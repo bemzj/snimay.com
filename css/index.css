@@ -1,6 +1,6 @@
 @charset "UTF-8";
 #banner {
-  width: 1200px;
+  min-width: 1200px;
   position: relative; }
   #banner img {
     width: 100%; }

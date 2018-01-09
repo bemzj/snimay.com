@@ -221,7 +221,8 @@ header {
       height: 26px;
       padding: 27px 0px; }
       header nav .logoL a img {
-        height: 26px; }
+        height: 26px;
+        width: auto; }
     header nav .navR ul li {
       float: left; }
       header nav .navR ul li a {

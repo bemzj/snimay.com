@@ -10,7 +10,7 @@ body {
 #banner {
   width: 100%;
   position: relative; }
-  #banner img {
+  #banner > img {
     width: 100%; }
   #banner .step {
     width: 1200px;

@@ -61,15 +61,15 @@ header nav .navR ul li:hover{
         position: relative;
         .swiper-button-prev{
             position: absolute;
-            height: 20px!important;
-            width: 12px!important;
+            height: 25px!important;
+            width: 15px!important;
             top: 50%;
             left: 10px;
-            margin-top: -10px;
-            height: 12px;
+            margin-top: -12.5px;
+            height: 15px;
             z-index: 5;
             background-image: url(../img/leftb.png);
-            background-size: 12px 20px;
+            background-size: 15px 25px;
         }
         .swiper-slide{
             margin-left: 20px;
@@ -77,15 +77,15 @@ header nav .navR ul li:hover{
         }
         .swiper-button-next{
             position: absolute;
-            height: 20px!important;
+            height: 25px!important;
             top: 50%;
-            width: 12px!important;
+            width: 15px!important;
             right: 10px;
-            margin-top: -10px;
-            height: 12px;
+            margin-top: -12.5px;
+            height: 15px;
             z-index: 5;
             background-image: url(../img/rightb.png);
-            background-size: 12px 20px;
+            background-size: 15px 25px;
         }
     }
     .imgContent{

@@ -91,6 +91,7 @@ $(function(){
 		$('.area2>p').html("请选择市");
 		$('.cbPro').html("请选择市");	
 		$('.cbCity').html("请选择市");
+		$('.areaBox a').remove();
 	});
 	$('.area2>p').click(function(){
 		$('.area2').removeAttr('city');
@@ -110,23 +111,7 @@ $(function(){
 		}
 		$(this).html("请选择市");
 		$('.cbCity').html("请选择市");
-	});
-	$('.area3>p').click(function(){
-		$('.area3').removeAttr('area');
-		$('.proviceBox').remove();
-		$(this).html("请选择区");
-		getArea('.area3','p');
-		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
-		{
-			$('.proviceBox').css('top','65px');
-		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
-			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
-		}
-		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
-			$('.proviceBox').css('left','0px');
-		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
-			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
-		}
+		$('.areaBox a').remove();
 	});
 	function getCity(target,label){
 		var html = "";
@@ -159,42 +144,20 @@ $(function(){
 				$(target).attr('city', $(this).attr('c'));
 				var indexp = $('.zjProvice').attr('provice');
 				var indexc = $('.zjCity').attr('city');
+				if(indexp < 4) {
+					for(var i = 0; i < citys[indexp].c.length; i++) {
+						$('.areaBox').prepend('<a href="###" class="floatl">'+ citys[indexp].c[i].n + '</a>');
+					}
 				
-			});
-		} 
-	}
-	function getArea(target,label){
-		var html = "";
-		html += '<div class="proviceBox"><p>区</p>';
-		html+= '<div class="list"><div class="lLeft floatl"><p>A-G</p></div><div class="lRight  floatl lr"></div></div><div class="clearl"></div>	</div>';
-		html +=	'</div>';
-		$(target).append(html);
-		$('.proviceBox').width(500);
-		$('.proviceBox .lLeft').remove();
-		var indexp = $('.zjProvice').attr('provice');
-		var indexc = $('.zjCity').attr('city');
-		if(typeof indexc == 'undefined' || typeof indexp == 'undefined' ){
-			$('.lr').prepend('<div class="floatl" style="width:100%"><a href="###">'+"请先选择省区或市区"+'</a></div>');
-			$('.proviceBox a').click(function() {
-				$('.proviceBox').remove();
-			});
-		}else{
-			if(indexp < 4) {
-				for(var i=0;i<citys[indexp].c.length;i++)
-				{
-					$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[i].n + '</a></div>');
-				}
-				
-			} else if(indexp < 34) {
-				for(var i = 0; i < citys[indexp].c[indexc].a.length; i++) {
-					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[indexc].a[i] + '</a></div>');
-				}
-			};
-			$('.lr1').append('<div class="clearl">');
-			$('.proviceBox a').click(function() {
-				$(target).children(label).html($(this).html());
-				$('.proviceBox').remove();
-				$(target).attr('area', $(this).attr('c'));
+				} else if(indexp < 34) {
+					for(var i = 0; i < citys[indexp].c[indexc].a.length; i++) {
+						$('.areaBox').prepend('<a href="###" class="floatl">' + citys[indexp].c[indexc].a[i] + '</a>');
+					}
+				};
+				$('.areaBox a').click(function(){
+					$('.areaBox a').removeClass('areaActive');
+					$(this).addClass('areaActive')
+				});
 			});
 		} 
 	}

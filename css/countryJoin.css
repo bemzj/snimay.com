@@ -58,11 +58,15 @@ header {
   margin: 0 auto; }
   #join .cityBox {
     width: 1200px;
-    height: 140px;
+    min-height: 140px;
+    transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -webkit-transition: height 0.5s;
     margin-top: 40px; }
     #join .cityBox .cbLeft {
       width: 190px;
-      height: 140px;
+      height: 144px;
       background-color: #a51e32;
       margin-right: 5px; }
       #join .cityBox .cbLeft .cbPro {
@@ -80,10 +84,12 @@ header {
         width: auto;
         border: 1px solid white;
         border-radius: 5px;
-        background-color: #a51e32; }
+        background-color: #a51e32;
+        cursor: inherit; }
     #join .cityBox .cbRight {
       width: 1005px;
-      height: 140px;
+      min-height: 34px;
+      padding: 55px 0;
       position: relative;
       background-color: #EEEEEE; }
       #join .cityBox .cbRight .ccbtnBox {
@@ -106,7 +112,7 @@ header {
       #join .cityBox .cbRight .areaBox {
         width: 885px;
         margin: 0 auto;
-        margin-top: 55px; }
+        min-height: 34px; }
         #join .cityBox .cbRight .areaBox a {
           display: block;
           padding: 3px 12px;
@@ -114,7 +120,8 @@ header {
           border-radius: 5px;
           background-color: transparent;
           color: #888888;
-          margin-right: 10px; }
+          margin-right: 10px;
+          margin-bottom: 10px; }
         #join .cityBox .cbRight .areaBox .areaActive {
           background-color: #a51e32;
           border-color: #a51e32;
@@ -175,5 +182,56 @@ header {
     text-indent: 0px;
     margin-bottom: 10px;
     color: #a51e32; }
+
+.login {
+  padding: 115px 0;
+  width: 800px;
+  background-color: #fcfcfc;
+  margin: 0 auto;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 0 10px 10px rgba(246, 246, 246, 0.1); }
+  .login ul li {
+    width: 598px;
+    height: 58px;
+    border: 1px solid #c8c8c8;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+    background: url(../img/jobperson.png) no-repeat 15px center;
+    background-color: #f6f6f6; }
+    .login ul li p {
+      color: #333333;
+      font-size: 16px;
+      position: absolute;
+      top: 0;
+      left: 45px;
+      line-height: 58px; }
+    .login ul li input {
+      width: 480px;
+      border: 0;
+      height: 58px;
+      line-height: 58px;
+      margin-left: 100px;
+      background-color: #f6f6f6; }
+  .login ul li:nth-child(2) {
+    background: url(../img/password.png) no-repeat 15px center;
+    background-color: #f6f6f6; }
+
+.loginBtn {
+  padding-top: 20px; }
+  .loginBtn button {
+    width: 398px;
+    height: 58px;
+    border: 1px solid #C8C8C8;
+    display: block;
+    margin: 0 auto;
+    color: #333333;
+    font-size: 18px;
+    background-color: #F6F6F6;
+    margin-top: 30px; }
+  .loginBtn .redbtn {
+    border-color: #a51e32;
+    background-color: #a51e32;
+    color: white; }
 
 /*# sourceMappingURL=countryJoin.css.map */

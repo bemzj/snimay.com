@@ -5,121 +5,64 @@ header{
 }
 #banner{
     min-width: 1200px;
-    >img{
+    img{
         width: 100%;
     }
 }
-#choiceBox{
+#artical{
     width: 1200px;
     margin: 0 auto;
-    .cType{
-        width: 1200px;
-        margin-top: 3px;
-        .typeBox{
-            width: 1200px;
-            position: relative;   
-           border-bottom: 1px solid transparent;      
-            .tTitle{
-                position: absolute;
-                width: 140px;
-                height: 100%;
-                left: 0;
-                top: 0;
-                background-color: #eeeeee;
-                color: $black;
-                
-                p{
-                    text-align: center;
-                    width: 100%;
-                    font-size: 16px;
-                    line-height: 16px;
-                    position: absolute;
-                    top: 50%;
-                    margin-top: -8px;
-                }
-                
-            }
-            .tBox{
-                min-height: 44px;
-                width: 1050px;
-                margin-left: 150px;
-                padding-top: 7px;
-                .hasChoice{
-                    float: left;
-                    padding: 0 20px;
-                    height: 34px;
-                    margin: 0px 7px 7px 7px;
-                    border: 1px solid $red;
-                    position: relative;
-                    
-                    p{
-                        line-height: 34px;
-                        color: $black;
-                        font-size: 14px;
-                        
-                    }
-                    a{
-                        overflow: hidden;
-                        display: block;
-                        width: 13px;
-                        height: 13px;
-                        background: url(../img/closeRed.png) no-repeat center center;
-                        background-size: 100% 100%;
-                        position:absolute;
-                        top: -6.5px;
-                        right: -6.5px;
-                        
-                    }
-                }
-                .clBox{
-                    border-bottom: 1px solid #EEEEEE;
-                    
-                }
-                .clActive{
-                    background-color: $red!important;
-                    color: white!important;
-                }
-                .choiceList{
-                    display: block;
-                    float: left;
-                    width: 140px;
-                    line-height: 36px;
-                    height: 36px;
-                    margin: 0px 18px 6px 17px;
-                    text-align: center;
-                    color: $black;
-                    font-size: 14px;
-                    position: relative;
-                    cursor: pointer;
-                    cursor: -ms-pointer;
-                    span{
-                        position: absolute;
-                        top: 50%;
-                        margin-top: -7.5px;
-                        display: inline-block;
-                        height: 15px;
-                        width: 1px;
-                        background-color: #eeeeee;
-                        right: -17px;
-                    }
-                }
-                .choiceList:nth-last-child(2){
-                    span{
-                        display: none;
-                    }
-                }
-                .choiceList:hover{
-                    background-color: $red;
-                    color: white;
-                }
-            }
+    .artLeft{
+        width: 600px;
+        height: 450px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            transition: width 0.5s;
+            -moz-transition: width 0.5s;
+            -webkit-transition: width 0.5s;
+            -ms-transition: width 0.5s;
+        }
+        img:hover{
+            width: 110%;
+        }
+    }
+    .artRight{
+        width: 600px;
+        ul{
+            width: 495px;
+            margin: 0 auto;
+        }
+        .artTitle{
+            font-size: 18px;
+            color: $black;
+            margin-top: 55px;
+        }
+        .artEng{
+            font-size: 12px;
+            color: #999999;
+            margin-top: 5px;
+        }
+        .artLine{
+            display: block;
+            width: 46px;
+            color: $red;
+            border-bottom: 1px solid $red;
+            margin: 15px 0 5px;
+        }
+        .artContent{
+            font-size: 12px;
+            color: $black;
+            line-height: 32px;
         }
     }
 }
 #results{
     width: 1200px;
     margin: 0 auto;
-    margin-top: 80px;
+    .bigTitle{
+        padding: 80px 0 40px;
+    }
     .resultBox{
         width: 1200px;
         .result{
@@ -285,21 +228,80 @@ header{
         margin-right: 0px;
     }
 }
-
-#threeD{
-    position: fixed;
-    display: block;
-    bottom: 50%;
-    left: 20px;
-    z-index: 1000;
-    transition: transform 1s;
-    -ms-transition: transform 1s;
-    -moz-transition: transform 1s;
-    -webkit-transition: transform 1s;
-}
-#threeD:hover{
-    transform: rotateY(360deg);
-    -ms-transform: rotateY(360deg);
-    -webkit-transform: rotateY(360deg);
-    -moz-transform: rotateY(360deg);
+#typeChoice{
+    margin: 0 auto;
+    width: 1200px;   
+    background-color: white;
+    margin-bottom: 80px;
+    .sNav {
+        padding: 60px 0 20px 0;
+        border-bottom: 1px solid #c8c8c8;
+        div:nth-child(1) {
+            p {
+                font-size: 20px;
+                line-height: 30px;
+                color: $black;
+                font-weight: bold;
+            }
+        }
+        div:nth-child(2) {
+            ul li:last-child {
+                a {
+                    border-right: 1px solid transparent;
+                }
+            }
+            ul li {
+                padding: 9px 0px;
+                float: left;
+                border-radius: 5px;
+                overflow: hidden;
+                a {
+                    padding: 0 20px;
+                    border-right: 1px solid #c8c8c8;
+                    color: $black;
+                }
+            }
+            ul li:hover {
+                background-color: #a51e32;
+                a {
+                    border-right: 1px solid $red!important;
+                    color: white;
+                }
+            }
+            ul li:nth-child(1):hover {
+                background-color: #a51e32;
+                a {
+                    border-right: 1px solid $red!important;
+                    border-left: 1px solid $red!important;
+                    color: white;
+                }
+            }
+            ul {
+                .lsd {
+                    background-color: #a51e32;
+                    a {
+                        border-right: 1px solid $red!important;
+                        color: white;
+                    }
+                }
+                .lsdn {
+                    background-color: #a51e32;
+                    a {
+                        border-right: 1px solid $red!important;
+                        color: white;
+                    }
+                }
+                .lsdp {
+                    a {
+                        border-right: 1px solid transparent!important;
+                    }
+                }
+                .lsdpn {
+                    a {
+                        border-right: 1px solid transparent!important;
+                    }
+                }
+            }
+        }
+    }
 }

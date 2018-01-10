@@ -3,98 +3,53 @@ header {
 
 #banner {
   min-width: 1200px; }
-  #banner > img {
+  #banner img {
     width: 100%; }
 
-#choiceBox {
+#artical {
   width: 1200px;
   margin: 0 auto; }
-  #choiceBox .cType {
-    width: 1200px;
-    margin-top: 3px; }
-    #choiceBox .cType .typeBox {
-      width: 1200px;
-      position: relative;
-      border-bottom: 1px solid transparent; }
-      #choiceBox .cType .typeBox .tTitle {
-        position: absolute;
-        width: 140px;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: #eeeeee;
-        color: #333333; }
-        #choiceBox .cType .typeBox .tTitle p {
-          text-align: center;
-          width: 100%;
-          font-size: 16px;
-          line-height: 16px;
-          position: absolute;
-          top: 50%;
-          margin-top: -8px; }
-      #choiceBox .cType .typeBox .tBox {
-        min-height: 44px;
-        width: 1050px;
-        margin-left: 150px;
-        padding-top: 7px; }
-        #choiceBox .cType .typeBox .tBox .hasChoice {
-          float: left;
-          padding: 0 20px;
-          height: 34px;
-          margin: 0px 7px 7px 7px;
-          border: 1px solid #a51e32;
-          position: relative; }
-          #choiceBox .cType .typeBox .tBox .hasChoice p {
-            line-height: 34px;
-            color: #333333;
-            font-size: 14px; }
-          #choiceBox .cType .typeBox .tBox .hasChoice a {
-            overflow: hidden;
-            display: block;
-            width: 13px;
-            height: 13px;
-            background: url(../img/closeRed.png) no-repeat center center;
-            background-size: 100% 100%;
-            position: absolute;
-            top: -6.5px;
-            right: -6.5px; }
-        #choiceBox .cType .typeBox .tBox .clBox {
-          border-bottom: 1px solid #EEEEEE; }
-        #choiceBox .cType .typeBox .tBox .clActive {
-          background-color: #a51e32 !important;
-          color: white !important; }
-        #choiceBox .cType .typeBox .tBox .choiceList {
-          display: block;
-          float: left;
-          width: 140px;
-          line-height: 36px;
-          height: 36px;
-          margin: 0px 18px 6px 17px;
-          text-align: center;
-          color: #333333;
-          font-size: 14px;
-          position: relative;
-          cursor: pointer;
-          cursor: -ms-pointer; }
-          #choiceBox .cType .typeBox .tBox .choiceList span {
-            position: absolute;
-            top: 50%;
-            margin-top: -7.5px;
-            display: inline-block;
-            height: 15px;
-            width: 1px;
-            background-color: #eeeeee;
-            right: -17px; }
-        #choiceBox .cType .typeBox .tBox .choiceList:nth-last-child(2) span {
-          display: none; }
-        #choiceBox .cType .typeBox .tBox .choiceList:hover {
-          background-color: #a51e32;
-          color: white; }
+  #artical .artLeft {
+    width: 600px;
+    height: 450px;
+    overflow: hidden; }
+    #artical .artLeft img {
+      width: 100%;
+      transition: width 0.5s;
+      -moz-transition: width 0.5s;
+      -webkit-transition: width 0.5s;
+      -ms-transition: width 0.5s; }
+    #artical .artLeft img:hover {
+      width: 110%; }
+  #artical .artRight {
+    width: 600px; }
+    #artical .artRight ul {
+      width: 495px;
+      margin: 0 auto; }
+    #artical .artRight .artTitle {
+      font-size: 18px;
+      color: #333333;
+      margin-top: 55px; }
+    #artical .artRight .artEng {
+      font-size: 12px;
+      color: #999999;
+      margin-top: 5px; }
+    #artical .artRight .artLine {
+      display: block;
+      width: 46px;
+      color: #a51e32;
+      border-bottom: 1px solid #a51e32;
+      margin: 15px 0 5px; }
+    #artical .artRight .artContent {
+      font-size: 12px;
+      color: #333333;
+      line-height: 32px; }
 
 #results {
   width: 1200px;
-  margin: 0 auto;
-  margin-top: 80px; }
+  margin: 0 auto; }
+  #results .bigTitle {
+    padding: 80px 0 40px; }
   #results .resultBox {
     width: 1200px; }
     #results .resultBox .result {
@@ -227,21 +182,54 @@ header {
   .page ul li:last-child {
     margin-right: 0px; }
 
-#threeD {
-  position: fixed;
-  display: block;
-  bottom: 50%;
-  left: 20px;
-  z-index: 1000;
-  transition: transform 1s;
-  -ms-transition: transform 1s;
-  -moz-transition: transform 1s;
-  -webkit-transition: transform 1s; }
+#typeChoice {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: white;
+  margin-bottom: 80px; }
+  #typeChoice .sNav {
+    padding: 60px 0 20px 0;
+    border-bottom: 1px solid #c8c8c8; }
+    #typeChoice .sNav div:nth-child(1) p {
+      font-size: 20px;
+      line-height: 30px;
+      color: #333333;
+      font-weight: bold; }
+    #typeChoice .sNav div:nth-child(2) ul li:last-child a {
+      border-right: 1px solid transparent; }
+    #typeChoice .sNav div:nth-child(2) ul li {
+      padding: 9px 0px;
+      float: left;
+      border-radius: 5px;
+      overflow: hidden; }
+      #typeChoice .sNav div:nth-child(2) ul li a {
+        padding: 0 20px;
+        border-right: 1px solid #c8c8c8;
+        color: #333333; }
+    #typeChoice .sNav div:nth-child(2) ul li:hover {
+      background-color: #a51e32; }
+      #typeChoice .sNav div:nth-child(2) ul li:hover a {
+        border-right: 1px solid #a51e32 !important;
+        color: white; }
+    #typeChoice .sNav div:nth-child(2) ul li:nth-child(1):hover {
+      background-color: #a51e32; }
+      #typeChoice .sNav div:nth-child(2) ul li:nth-child(1):hover a {
+        border-right: 1px solid #a51e32 !important;
+        border-left: 1px solid #a51e32 !important;
+        color: white; }
+    #typeChoice .sNav div:nth-child(2) ul .lsd {
+      background-color: #a51e32; }
+      #typeChoice .sNav div:nth-child(2) ul .lsd a {
+        border-right: 1px solid #a51e32 !important;
+        color: white; }
+    #typeChoice .sNav div:nth-child(2) ul .lsdn {
+      background-color: #a51e32; }
+      #typeChoice .sNav div:nth-child(2) ul .lsdn a {
+        border-right: 1px solid #a51e32 !important;
+        color: white; }
+    #typeChoice .sNav div:nth-child(2) ul .lsdp a {
+      border-right: 1px solid transparent !important; }
+    #typeChoice .sNav div:nth-child(2) ul .lsdpn a {
+      border-right: 1px solid transparent !important; }
 
-#threeD:hover {
-  transform: rotateY(360deg);
-  -ms-transform: rotateY(360deg);
-  -webkit-transform: rotateY(360deg);
-  -moz-transform: rotateY(360deg); }
-
-/*# sourceMappingURL=business.css.map */
+/*# sourceMappingURL=project%A1%A4.css.map */

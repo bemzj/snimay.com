@@ -1,4 +1,17 @@
 $(function(){
+	//开眼
+	$('.closeEye').click(function(){
+		$(this).siblings('input').attr('type','text');
+		$(this).hide();
+		$(this).siblings('.openEye').show();
+	});
+	//闭眼
+	$('.openEye').click(function(){
+		$(this).siblings('input').attr('type','password');
+		$(this).hide();
+		$(this).siblings('.closeEye').show();
+	});
+	
 	function getProvince(target,label){
 		/* 
 		 * target为父级
@@ -161,4 +174,9 @@ $(function(){
 			});
 		} 
 	}
+	//游客访问
+	$('.touInvist').on('click',function(){
+		$('.login').hide();
+		$('.tour').show().addClass('animated bounceInUp');
+	});
 });

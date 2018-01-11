@@ -6,7 +6,7 @@ $(function(){
 		paginationClickable :true,
 		autoplayDisableOnInteraction : false,
 		paginationBulletRender: function (swiper, index,className) {
-		    return '<span class="' + className + '">0' + (index + 1) + '</span>';
+		    return '<span class="' + className + '">' + (index + 1) + '</span>';
 		    
 		},
 		effect : 'fade',
@@ -15,7 +15,7 @@ $(function(){
 			//添加分页标签
 			for(i=0;i<$('.swiper-pagination span').length;i++)
 			{
-				$('.swiper-pagination span').eq(i).text('0'+(i+1));
+				$('.swiper-pagination span').eq(i).text(''+(i+1));
 			}	
 		},onSlideChangeStart: function(swiper){
 	       if(swiper.activeIndex%2==0){
@@ -42,7 +42,7 @@ $(function(){
 		paginationClickable :true,
 		autoplayDisableOnInteraction : false,
 		paginationBulletRender: function (swiper, index,className) {
-		    return '<span class="' + className + '">0' + (index + 1) + '</span>';
+		    return '<span class="' + className + '">' + (index + 1) + '</span>';
 		    
 		},
 		autoplay:5000,
@@ -50,7 +50,7 @@ $(function(){
 			//添加分页标签
 			for(i=0;i<$('.swiper-pagination span').length;i++)
 			{
-				$('.swiper-pagination span').eq(i).text('0'+(i+1));
+				$('.swiper-pagination span').eq(i).text(''+(i+1));
 			}	
 		},
 	}); 

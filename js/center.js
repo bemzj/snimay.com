@@ -80,51 +80,17 @@ $(function(){
 		$(target).append(html);
 		for(var i=0;i<citys.length;i++)
 		{
-			switch(i)
+			if(i<6)
 			{
-				case 0:
-				case 3:
-				case 13:
-				case 15:
-				case 18:
-				case 19:
-				case 23:
-				case 27:
-				case 32:
-					$('.lr1').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
-				break;
-				case 4:
-				case 6:
-				case 8:
-				case 9:
-				case 11:
-				case 16:
-				case 17:
-				case 20:
-				case 21:
-				case 33:
-					$('.lr2').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
-				break;
-				case 1:
-				case 5:
-				case 7:
-				case 10:
-				case 12:
-				case 21:
-				case 26:
-				case 28:
-				case 29:
-					$('.lr3').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
-				break;
-				case 2:
-				case 14:
-				case 24:
-				case 25:
-				case 30:
-				case 31:
-				
-					$('.lr4').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
-				break;
+				$('.lr1').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+			}else if(i<16)
+			{
+				$('.lr2').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+			}else if(i<25)
+			{
+				$('.lr3').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+			}else{
+				$('.lr4').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
 			}
 			
 		}
@@ -207,9 +173,9 @@ $(function(){
 				$('.proviceBox').remove();
 			});
 		}else{
-			if(index < 4) {
+			if(index ==0||index ==23||index==25||index==30) {
 				$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[index].n + '</a></div>');
-			} else if(index < 34) {
+			} else{
 				for(var i = 0; i < citys[index].c.length; i++) {
 					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[index].c[i].n + '</a></div>');
 				}
@@ -239,13 +205,13 @@ $(function(){
 				$('.proviceBox').remove();
 			});
 		}else{
-			if(indexp < 4) {
-				for(var i=0;i<citys[indexp].c.length;i++)
+			if(indexp ==0||indexp ==23||indexp==25||indexp==30) {
+				for(var i=0;i<citys[indexp].c[0].a.length;i++)
 				{
-					$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[i].n + '</a></div>');
+					$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[0].a[i] + '</a></div>');
 				}
 				
-			} else if(indexp < 34) {
+			} else{
 				for(var i = 0; i < citys[indexp].c[indexc].a.length; i++) {
 					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[indexc].a[i] + '</a></div>');
 				}

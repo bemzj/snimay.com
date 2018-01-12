@@ -309,90 +309,401 @@ body {
     #support .icSwiper .ictop:hover > .icbottom {
       bottom: 0px; }
 
-#style .bigTitle {
-  padding-bottom: 40px; }
-#style .swiper-button-prev {
-  left: -40px;
-  width: 30px;
-  height: 60px;
-  margin-top: -30px;
-  background: url(../img/left.png) no-repeat center center;
-  background-size: auto auto;
-  -moz-background-size: auto auto;
-  -webkit-background-size: auto auto;
-  background-color: white;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  -ms-transition: background-color 0.5s;
-  transition: background-color 0.5s; }
-#style .swiper-button-prev:hover {
-  background-color: #a51e32; }
-#style .swiper-button-next {
-  right: -40px;
-  width: 30px;
-  height: 60px;
-  margin-top: -30px;
-  background: url(../img/right.png) no-repeat center center;
-  background-size: auto auto;
-  -moz-background-size: auto auto;
-  -webkit-background-size: auto auto;
-  background-color: white;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  -ms-transition: background-color 0.5s;
-  transition: background-color 0.5s; }
-#style .swiper-button-next:hover {
-  background-color: #a51e32; }
-#style .ssBox {
-  width: 1100px;
+#style {
+  padding-bottom: 100px; }
+  #style .bigTitle {
+    padding-bottom: 40px; }
+  #style .swiper-button-prev {
+    left: -50px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    background: url(../img/left.png) no-repeat center center;
+    background-size: auto auto;
+    border-radius: 50%;
+    -moz-background-size: auto auto;
+    -webkit-background-size: auto auto;
+    background-color: #eeeeee;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+  #style .swiper-button-prev:hover {
+    background-color: #a51e32; }
+  #style .swiper-button-next {
+    right: -50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -20px;
+    background: url(../img/right.png) no-repeat center center;
+    background-size: auto auto;
+    -moz-background-size: auto auto;
+    -webkit-background-size: auto auto;
+    background-color: #eeeeee;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    transition: background-color 0.5s; }
+  #style .swiper-button-next:hover {
+    background-color: #a51e32; }
+  #style .styleSwiper {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative; }
+  #style .ssBox {
+    width: 1100px;
+    margin: 0 auto; }
+    #style .ssBox .ssLeft {
+      width: 600px; }
+      #style .ssBox .ssLeft .ssTopImg {
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 15px; }
+      #style .ssBox .ssLeft .ssBottomImg .floatl {
+        width: 190px;
+        height: 126px;
+        overflow: hidden;
+        margin-right: 15px; }
+      #style .ssBox .ssLeft .ssBottomImg .floatl:nth-last-child(2) {
+        margin-right: 0; }
+    #style .ssBox .ssRight {
+      width: 500px; }
+      #style .ssBox .ssRight ul {
+        width: 324px;
+        margin: 0 auto; }
+      #style .ssBox .ssRight .sshead {
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        border: 3px solid #eeeeee;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: 45px; }
+      #style .ssBox .ssRight .ssName {
+        font-size: 20px;
+        color: #888888;
+        text-align: center;
+        line-height: 60px; }
+      #style .ssBox .ssRight .hLine {
+        display: block;
+        width: 45px;
+        border-bottom: 1px solid #c8c8c8;
+        margin: 0 auto; }
+      #style .ssBox .ssRight .ssStore {
+        margin-top: 10px;
+        font-size: 20px;
+        color: #333333;
+        text-align: center;
+        font-weight: bold;
+        line-height: 50px; }
+      #style .ssBox .ssRight .ssContent {
+        font-size: 12px;
+        color: #333333;
+        line-height: 30px; }
+
+#joinMessage {
+  width: 1200px;
   margin: 0 auto; }
-  #style .ssBox .ssLeft {
-    width: 600px; }
-    #style .ssBox .ssLeft .ssTopImg {
-      width: 600px;
-      height: 400px;
-      overflow: hidden;
-      margin-bottom: 15px; }
-    #style .ssBox .ssLeft .ssBottomImg .floatl {
-      width: 190px;
-      height: 126px;
-      overflow: hidden;
-      margin-right: 15px; }
-    #style .ssBox .ssLeft .ssBottomImg .floatl:nth-last-child(2) {
-      margin-right: 0; }
-  #style .ssBox .ssRight {
-    width: 500px; }
-    #style .ssBox .ssRight ul {
-      width: 324px;
-      margin: 0 auto; }
-    #style .ssBox .ssRight .sshead {
-      width: 140px;
-      height: 140px;
-      overflow: hidden;
-      border: 3px solid #eeeeee;
-      border-radius: 50%;
-      margin: 0 auto;
-      margin-top: 45px; }
-    #style .ssBox .ssRight .ssName {
-      font-size: 20px;
-      color: #888888;
-      text-align: center;
-      line-height: 60px; }
-    #style .ssBox .ssRight .hLine {
+  #joinMessage .jmChoice {
+    width: 100%;
+    position: relative; }
+    #joinMessage .jmChoice button {
       display: block;
-      width: 45px;
-      border-bottom: 1px solid #c8c8c8;
-      margin: 0 auto; }
-    #style .ssBox .ssRight .ssStore {
-      margin-top: 10px;
+      width: 600px;
+      height: 60px;
+      border: 1px solid #c8c8c8;
       font-size: 20px;
-      color: #333333;
-      text-align: center;
       font-weight: bold;
-      line-height: 50px; }
-    #style .ssBox .ssRight .ssContent {
-      font-size: 12px;
+      color: #888888; }
+    #joinMessage .jmChoice > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -6px;
+      margin-top: -6px;
+      z-index: 5; }
+    #joinMessage .jmChoice .jmButton {
+      color: white;
+      background-color: #a51e32;
+      border-color: #a51e32; }
+  #joinMessage .modelBox {
+    width: 100%;
+    padding: 40px 0 20px; }
+    #joinMessage .modelBox table tr:nth-child(2n+1) {
+      background-color: #f6f6f6; }
+      #joinMessage .modelBox table tr:nth-child(2n+1) td {
+        border-color: #F6F6F6; }
+    #joinMessage .modelBox table tr:nth-child(1) {
+      background-color: #c8aa82; }
+      #joinMessage .modelBox table tr:nth-child(1) td {
+        font-size: 16px;
+        color: white; }
+    #joinMessage .modelBox table tr {
+      border-bottom: 1px solid #eeeeee; }
+      #joinMessage .modelBox table tr td {
+        width: 240px;
+        height: 60px;
+        text-align: center;
+        color: #333333;
+        font-size: 14px;
+        border-right: 1px solid white; }
+      #joinMessage .modelBox table tr td:nth-child(1) {
+        width: 239px; }
+      #joinMessage .modelBox table tr td:nth-child(5) {
+        width: 239px;
+        border-right: 0px; }
+  #joinMessage .condition {
+    width: 1200px;
+    background-color: #f6f6f6;
+    height: 360px;
+    margin: 40px 0 20px; }
+    #joinMessage .condition ul {
+      width: 1000px;
+      margin: 0 auto;
+      padding-top: 70px; }
+    #joinMessage .condition .conTitle {
+      font-size: 20px;
+      font-weight: bold; }
+    #joinMessage .condition span {
+      width: 60px;
+      border-bottom: 1px solid #a51e32;
+      display: block;
+      margin: 10px 0; }
+    #joinMessage .condition p {
+      font-size: 14px;
       color: #333333;
-      line-height: 30px; }
+      line-height: 36px; }
+
+#joinStep {
+  width: 1200px;
+  margin: 0 auto; }
+  #joinStep .stepBox {
+    width: 1200px;
+    height: 400px; }
+    #joinStep .stepBox > .floatl {
+      width: 200px; }
+    #joinStep .stepBox .chead {
+      width: 121px;
+      height: 121px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: url(../img/step01.png) no-repeat center center;
+      background-color: #c8aa82; }
+    #joinStep .stepBox .floatl:nth-child(2) .chead {
+      background-image: url(../img/step02.png); }
+    #joinStep .stepBox .floatl:nth-child(3) > .chead {
+      background-image: url(../img/step03.png); }
+    #joinStep .stepBox .floatl:nth-child(4) > .chead {
+      background-image: url(../img/step04.png); }
+    #joinStep .stepBox .floatl:nth-child(5) > .chead {
+      background-image: url(../img/step05.png); }
+    #joinStep .stepBox .floatl:nth-child(6) > .chead {
+      background-image: url(../img/step06.png); }
+    #joinStep .stepBox .slline {
+      border-right: 1px solid #c8aa82;
+      height: 98px;
+      margin-left: 98px;
+      width: 1px;
+      -moz-transition: height 0.5s;
+      -webkit-transition: height 0.5s;
+      -ms-transition: height 0.5s;
+      transition: height 0.5s; }
+    #joinStep .stepBox .ssline {
+      height: 49px; }
+    #joinStep .stepBox > .floatl:nth-child(2n+1):hover .slline {
+      height: 49px; }
+    #joinStep .stepBox > .floatl:nth-child(2n):hover .slline {
+      height: 98px; }
+    #joinStep .stepBox .scircle {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      border: 1px solid #c8aa82;
+      margin: 0 auto; }
+    #joinStep .stepBox .number {
+      font-size: 14px;
+      font-family: arial;
+      color: #a51e32;
+      text-align: center;
+      margin: 20px 0px 15px; }
+    #joinStep .stepBox .nContent {
+      width: 126px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      color: #888888; }
+
+#getMore {
+  display: none;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 100; }
+  #getMore .getMore {
+    position: absolute;
+    top: 50%;
+    left: 110%; }
+
+#add {
+  width: 100%;
+  position: fixed;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  padding-top: 143px; }
+  #add .addBox {
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.6); }
+  #add .closeJoin {
+    position: absolute;
+    width: 60px;
+    top: 50%;
+    right: 40px;
+    margin-top: 41px; }
+    #add .closeJoin img {
+      width: 100%; }
+  #add .add {
+    width: 1200px;
+    margin: 0 auto; }
+  #add .addLeft {
+    width: 240px; }
+    #add .addLeft img {
+      margin-top: -143px; }
+  #add .addRight {
+    width: 960px; }
+    #add .addRight .arLeft {
+      width: 180px;
+      margin-left: 20px; }
+      #add .addRight .arLeft .arp {
+        padding-top: 25px;
+        line-height: 60px;
+        text-indent: 25px;
+        font-size: 14px;
+        color: #EEEEEE; }
+        #add .addRight .arLeft .arp p {
+          background: url(../img/typeApply.png) no-repeat left center; }
+      #add .addRight .arLeft button {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+        color: #888888;
+        border-radius: 5px;
+        background-color: #4f4f4f;
+        margin-bottom: 20px;
+        margin-right: 20px; }
+      #add .addRight .arLeft .btnActive {
+        background-color: #a51e32;
+        color: white; }
+      #add .addRight .arLeft button:nth-child(2n) {
+        margin-right: 0px; }
+    #add .addRight .arMiddle {
+      width: 560px;
+      margin-left: 20px;
+      padding-top: 30px; }
+      #add .addRight .arMiddle .inputBox {
+        width: 268px;
+        height: 60px;
+        border: 1px solid #888888;
+        margin-bottom: 20px;
+        background: url(../img/jobperson.png) no-repeat 10px center; }
+        #add .addRight .arMiddle .inputBox input {
+          width: 220px;
+          margin-left: 38px;
+          height: 100%;
+          border: 0;
+          background-color: transparent;
+          color: white; }
+        #add .addRight .arMiddle .inputBox input::-moz-placeholder {
+          color: white; }
+        #add .addRight .arMiddle .inputBox input::-ms-input-placeholder {
+          color: white; }
+        #add .addRight .arMiddle .inputBox input::-webkit-input-placeholder {
+          color: white; }
+      #add .addRight .arMiddle .inputBox:nth-child(1) {
+        margin-right: 20px; }
+      #add .addRight .arMiddle .inputBox:nth-child(2) {
+        background-image: url(../img/jobphone.png); }
+      #add .addRight .arMiddle .select {
+        width: 168px;
+        height: 60px;
+        margin-bottom: 20px;
+        border: 1px solid #888888;
+        line-height: 60px;
+        text-indent: 20px;
+        font-size: 14px;
+        color: white;
+        margin-right: 25px;
+        background: url(../img/ms.png) no-repeat 128px center;
+        position: relative; }
+      #add .addRight .arMiddle .select:nth-last-child(2) {
+        margin-right: 0px; }
+    #add .addRight .arRight {
+      width: 150px;
+      margin-left: 20px;
+      padding-top: 70px; }
+      #add .addRight .arRight button {
+        width: 100%;
+        height: 60px;
+        border-radius: 8px;
+        color: white;
+        background-color: #a51e32;
+        font-size: 18px; }
+
+.proviceBox {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 540px;
+  padding-bottom: 10px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(51, 51, 51, 0.2);
+  z-index: 10; }
+  .proviceBox .list {
+    text-indent: 0px;
+    line-height: 28px; }
+    .proviceBox .list .lLeft {
+      width: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #333333; }
+    .proviceBox .list .lRight {
+      width: 500px; }
+      .proviceBox .list .lRight .floatl {
+        min-width: 100px;
+        font-size: 12px;
+        text-align: center;
+        color: #333333;
+        margin: 0; }
+        .proviceBox .list .lRight .floatl a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: #333333; }
+        .proviceBox .list .lRight .floatl a:hover {
+          color: #a51e32; }
+  .proviceBox > p {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #a51e32;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    text-indent: 0px;
+    margin-bottom: 10px;
+    color: #a51e32; }
+
+@media (max-width: 1439px) {
+  #add .closeJoin {
+    top: 163px;
+    right: 20px;
+    width: 40px;
+    margin-top: 0; } }
+@media (max-width: 1200px) {
+  .add {
+    position: relative; } }
 
 /*# sourceMappingURL=whyJoin.css.map */

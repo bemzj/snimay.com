@@ -2,16 +2,24 @@ $(function(){
 	var swiper = new Swiper('.swiper-container-four', {
         slidesPerView: 4,
         spaceBetween: 20,
-        prevButton:'.swiper-button-prev',
-		nextButton:'.swiper-button-next',
+        prevButton:'.swiper-button-prev1',
+		nextButton:'.swiper-button-next1',
 		loop:true
 		
     });
     var swiper1 = new Swiper('.swiper-container-style', {
-        prevButton:'.swiper-button-prev',
-		nextButton:'.swiper-button-next',
+        prevButton:'.swiper-button-prev2',
+		nextButton:'.swiper-button-next2',
 		loop:true
     });
+    //开启滑动动画
+	if(!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+		(function() {
+			window.scrollReveal = new scrollReveal({
+				reset: true
+			});
+		})();
+	};
 	//为什么选择诗尼曼
 	var title = [
 		"大家居发展已成趋势",
@@ -61,4 +69,191 @@ $(function(){
 		$('.itcChild').eq(step).siblings('.itcChild').removeClass('itcChildActive');
 		$('.itcChild').eq(step).addClass('itcChildActive');
 	},2000);
+	//
+	$('.jmChoice button').click(function(){
+		var index = $(this).index();
+		$(this).addClass('jmButton');
+		$(this).siblings('button').removeClass('jmButton');
+		if(index==0){
+			$('.modelBox').show().addClass('animated flipInX');
+			$('.condition').hide();
+		}else{
+			$('.modelBox').hide();
+			$('.condition').show().addClass('animated flipInX');
+		}
+	});
+	//
+	function getProvince(target,label){
+		/* 
+		 * target为父级
+		 * label为装子级的东西
+		 */
+		var html = "";
+		html += '<div class="proviceBox"><p>省份</p>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>A-G</p></div><div class="lRight  floatl lr1"></div></div><div class="clearl"></div>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>H-K</p></div><div class="lRight  floatl lr2"></div></div><div class="clearl"></div>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>L-S</p></div><div class="lRight  floatl lr3"></div></div><div class="clearl"></div>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>T-Z</p></div><div class="lRight  floatl lr4"></div></div><div class="clearl"></div>';
+		html +=	'</div>';
+		$(target).append(html);
+		for(var i=0;i<citys.length;i++)
+		{
+			if(i<6)
+			{
+				$('.lr1').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+			}else if(i<16)
+			{
+				$('.lr2').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+			}else if(i<25)
+			{
+				$('.lr3').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+			}else{
+				$('.lr4').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
+			}
+			
+		}
+		$('.proviceBox a').click(function(){
+			$(target).children(label).html($(this).html());
+			$('.proviceBox').remove();
+			$(target).addClass('zjProvice');
+			$(target).attr('provice',$(this).attr('c'));
+		});
+	}
+	$('.area1>p').click(function(){
+		$('.proviceBox').remove();
+		$('.area1').removeAttr('provice');
+		$('.area2').removeAttr('city');
+		$('.area3').removeAttr('area');
+		getProvince('.area1','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择省");
+		$('.area2>p').html("请选择市");
+		$('.area3>p').html("请选择区");		
+	});
+	$('.area2>p').click(function(){
+		$('.area2').removeAttr('city');
+		$('.area3').removeAttr('area');
+		$('.proviceBox').remove();
+		getCity('.area2','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+		$(this).html("请选择市");
+		$('.area3>p').html("请选择区");
+	});
+	$('.area3>p').click(function(){
+		$('.area3').removeAttr('area');
+		$('.proviceBox').remove();
+		$(this).html("请选择区");
+		getArea('.area3','p');
+		if($(window).height()-($(this).offset().top-$(window).scrollTop())>=($('.proviceBox').height()+20))
+		{
+			$('.proviceBox').css('top','65px');
+		}else if($(this).offset().top-$(window).scrollTop()>($('.proviceBox').height()+20)){
+			$('.proviceBox').css('top',-($('.proviceBox').height()+20)+'px');
+		}
+		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left','0px');
+		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+		}
+	});
+	function getCity(target,label){
+		var html = "";
+		html += '<div class="proviceBox"><p>市</p>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>A-G</p></div><div class="lRight  floatl lr"></div></div><div class="clearl"></div>	</div>';
+		html +=	'</div>';
+		$(target).append(html);
+		$('.proviceBox').width(500);
+		$('.proviceBox .lLeft').remove();
+		var index = $('.zjProvice').attr('provice');
+		if(typeof index == 'undefined'){
+			$('.lr').prepend('<div class="floatl" style="width:100%"><a href="###">'+"请先选择省份"+'</a></div>');
+			$('.proviceBox a').click(function() {
+				$('.proviceBox').remove();
+			});
+		}else{
+			if(index ==0||index ==23||index==25||index==30) {
+				$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[index].n + '</a></div>');
+			} else{
+				for(var i = 0; i < citys[index].c.length; i++) {
+					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[index].c[i].n + '</a></div>');
+				}
+			};
+			$('.lr1').append('<div class="clearl">');
+			$('.proviceBox a').click(function() {
+				$(target).children(label).html($(this).html());
+				$('.proviceBox').remove();
+				$(target).addClass('zjCity');
+				$(target).attr('city', $(this).attr('c'));
+			});
+		} 
+	}
+	function getArea(target,label){
+		var html = "";
+		html += '<div class="proviceBox"><p>区</p>';
+		html+= '<div class="list"><div class="lLeft floatl"><p>A-G</p></div><div class="lRight  floatl lr"></div></div><div class="clearl"></div>	</div>';
+		html +=	'</div>';
+		$(target).append(html);
+		$('.proviceBox').width(500);
+		$('.proviceBox .lLeft').remove();
+		var indexp = $('.zjProvice').attr('provice');
+		var indexc = $('.zjCity').attr('city');
+		if(typeof indexc == 'undefined' || typeof indexp == 'undefined' ){
+			$('.lr').prepend('<div class="floatl" style="width:100%"><a href="###">'+"请先选择省区或市区"+'</a></div>');
+			$('.proviceBox a').click(function() {
+				$('.proviceBox').remove();
+			});
+		}else{
+			if(indexp ==0||indexp ==23||indexp==25||indexp==30) {
+				for(var i=0;i<citys[indexp].c[0].a.length;i++)
+				{
+					$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[0].a[i] + '</a></div>');
+				}
+				
+			} else{
+				for(var i = 0; i < citys[indexp].c[indexc].a.length; i++) {
+					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[indexp].c[indexc].a[i] + '</a></div>');
+				}
+			};
+			$('.lr1').append('<div class="clearl">');
+			$('.proviceBox a').click(function() {
+				$(target).children(label).html($(this).html());
+				$('.proviceBox').remove();
+				$(target).attr('area', $(this).attr('c'));
+			});
+		} 
+	}
+	//
+	$('.arBtn button').click(function(){
+		$(this).addClass('btnActive');
+		$(this).siblings('button').removeClass('btnActive');
+	});
+	$('.closeJoin').click(function(){
+		$('#add').animate({'width':'0%'},500,function(){
+			$('#getMore').fadeIn(500);
+		});
+	});
+	$('.getMore').click(function(){
+		$('#getMore').fadeOut();
+		$('#add').animate({'width':'100%'},500);
+	})
 });

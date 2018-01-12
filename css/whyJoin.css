@@ -311,6 +311,38 @@ body {
 
 #style .bigTitle {
   padding-bottom: 40px; }
+#style .swiper-button-prev {
+  left: -40px;
+  width: 30px;
+  height: 60px;
+  margin-top: -30px;
+  background: url(../img/left.png) no-repeat center center;
+  background-size: auto auto;
+  -moz-background-size: auto auto;
+  -webkit-background-size: auto auto;
+  background-color: white;
+  -moz-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+#style .swiper-button-prev:hover {
+  background-color: #a51e32; }
+#style .swiper-button-next {
+  right: -40px;
+  width: 30px;
+  height: 60px;
+  margin-top: -30px;
+  background: url(../img/right.png) no-repeat center center;
+  background-size: auto auto;
+  -moz-background-size: auto auto;
+  -webkit-background-size: auto auto;
+  background-color: white;
+  -moz-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  transition: background-color 0.5s; }
+#style .swiper-button-next:hover {
+  background-color: #a51e32; }
 #style .ssBox {
   width: 1100px;
   margin: 0 auto; }
@@ -344,12 +376,20 @@ body {
     #style .ssBox .ssRight .ssName {
       font-size: 20px;
       color: #888888;
-      text-align: center; }
+      text-align: center;
+      line-height: 60px; }
+    #style .ssBox .ssRight .hLine {
+      display: block;
+      width: 45px;
+      border-bottom: 1px solid #c8c8c8;
+      margin: 0 auto; }
     #style .ssBox .ssRight .ssStore {
+      margin-top: 10px;
       font-size: 20px;
       color: #333333;
       text-align: center;
-      font-weight: bold; }
+      font-weight: bold;
+      line-height: 50px; }
     #style .ssBox .ssRight .ssContent {
       font-size: 12px;
       color: #333333;

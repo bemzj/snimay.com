@@ -46,7 +46,7 @@ $(function(){
 		}
 //		console.log(citys);
 	});
-	
+	///11111
 	function getProvince(target,label){
 		/* 
 		 * target为父级
@@ -115,6 +115,7 @@ $(function(){
 			$(target).attr('provice',$(this).attr('c'));
 		});
 	}
+	///11111
 	$('.area1>p').click(function(){
 		$('.proviceBox').remove();
 		$('.area1').removeAttr('provice');
@@ -138,6 +139,7 @@ $(function(){
 		$('.cbCity').html("请选择市");
 		$('.areaBox a').remove();
 	});
+	///11111
 	$('.area2>p').click(function(){
 		$('.area2').removeAttr('city');
 		$('.area3').removeAttr('area');
@@ -158,6 +160,7 @@ $(function(){
 		$('.cbCity').html("请选择市");
 		$('.areaBox a').remove();
 	});
+	///11111
 	function getCity(target,label){
 		var html = "";
 		html += '<div class="proviceBox"><p>市</p>';
@@ -195,6 +198,7 @@ $(function(){
 			});
 		} 
 	}
+	///11111
 	//游客访问
 	$('.touInvist').on('click',function(){
 		$('.login').hide();

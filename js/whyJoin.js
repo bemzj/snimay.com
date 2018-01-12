@@ -1,12 +1,16 @@
 $(function(){
 	var swiper = new Swiper('.swiper-container-four', {
         slidesPerView: 4,
-        paginationClickable: true,
         spaceBetween: 20,
         prevButton:'.swiper-button-prev',
 		nextButton:'.swiper-button-next',
 		loop:true
 		
+    });
+    var swiper1 = new Swiper('.swiper-container-style', {
+        prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next',
+		loop:true
     });
 	//为什么选择诗尼曼
 	var title = [

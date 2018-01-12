@@ -11,6 +11,38 @@ $(function(){
 		$(this).hide();
 		$(this).siblings('.closeEye').show();
 	});
+	var citys = [];
+	$.get('citys.json', function(data) {
+		console.log(data);
+		for(var i = 0; i < data.length; i++) {
+	
+			var cArray = [];
+			var aArray = [];
+			for(var j = 0; j < data[i].city.length; j++) {
+	
+				aArray = [];
+				if(data[i].city[j].area) {
+					for(var k = 0; k < data[i].city[j].area.length; k++) {
+						aArray.push(data[i].city[j].area[k].country_name);
+					}
+				}else{
+					aArray=["城区"];
+				}
+				var cJoin = {
+					"n": data[i].city[j].city_name,
+					"a": aArray
+				}
+				cArray.push(cJoin);
+			}
+	
+			var nJoin = {
+				"n": data[i].province_name,
+				"c": cArray
+			}
+			citys.push(nJoin);
+		}
+//		console.log(citys);
+	});
 	
 	function getProvince(target,label){
 		/* 
@@ -30,45 +62,42 @@ $(function(){
 			switch(i)
 			{
 				case 0:
-				case 3:
-				case 13:
-				case 15:
+				case 11:
+				case 12:
 				case 18:
 				case 19:
+				case 21:
 				case 23:
 				case 27:
-				case 32:
 					$('.lr1').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
 				break;
-				case 4:
+				case 2:
 				case 6:
-				case 8:
+				case 7:
 				case 9:
-				case 11:
+				case 13:
+				case 15:
 				case 16:
 				case 17:
-				case 20:
-				case 21:
-				case 33:
 					$('.lr2').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
 				break;
-				case 1:
+				case 3:
+				case 4:
 				case 5:
-				case 7:
-				case 10:
-				case 12:
-				case 21:
+				case 8:
+				case 14:
+				case 20:
+				case 22:
 				case 26:
 				case 28:
 				case 29:
 					$('.lr3').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
 				break;
-				case 2:
-				case 14:
+				case 1:
+				case 10:
 				case 24:
 				case 25:
 				case 30:
-				case 31:
 				
 					$('.lr4').append('<div class="floatl"><a href="###" c='+i+'>'+citys[i].n+'</a></div>');
 				break;
@@ -141,13 +170,9 @@ $(function(){
 				$('.proviceBox').remove();
 			});
 		}else{
-			if(index < 4) {
-				$('.lr').append('<div class="floatl"><a href="###" c='+i+'>' + citys[index].n + '</a></div>');
-			} else if(index < 34) {
 				for(var i = 0; i < citys[index].c.length; i++) {
 					$('.lr').prepend('<div class="floatl"><a href="###" c='+i+'>' + citys[index].c[i].n + '</a></div>');
 				}
-			};
 			$('.lr1').append('<div class="clearl">');
 			$('.proviceBox a').click(function() {
 				$(target).children(label).html($(this).html());
@@ -157,16 +182,9 @@ $(function(){
 				$(target).attr('city', $(this).attr('c'));
 				var indexp = $('.zjProvice').attr('provice');
 				var indexc = $('.zjCity').attr('city');
-				if(indexp < 4) {
-					for(var i = 0; i < citys[indexp].c.length; i++) {
-						$('.areaBox').prepend('<a href="###" class="floatl">'+ citys[indexp].c[i].n + '</a>');
-					}
-				
-				} else if(indexp < 34) {
-					for(var i = 0; i < citys[indexp].c[indexc].a.length; i++) {
-						$('.areaBox').prepend('<a href="###" class="floatl">' + citys[indexp].c[indexc].a[i] + '</a>');
-					}
-				};
+				for(var i = 0; i < citys[indexp].c[indexc].a.length; i++) {
+					$('.areaBox').prepend('<a href="###" class="floatl">' + citys[indexp].c[indexc].a[i] + '</a>');
+				}
 				$('.areaBox a').click(function(){
 					$('.areaBox a').removeClass('areaActive');
 					$(this).addClass('areaActive')

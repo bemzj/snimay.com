@@ -11,6 +11,9 @@ $(function(){
 		$(this).hide();
 		$(this).siblings('.closeEye').show();
 	});
+	
+	
+	//四小强
 	var citys = [];
 	$.get('citys.json', function(data) {
 		console.log(data);

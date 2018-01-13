@@ -552,7 +552,9 @@ body {
     height: 90px;
     font-size: 18px;
     line-height: 90px;
-    color: white; }
+    color: white;
+    background: url(../img/yellow.png) no-repeat 85px center;
+    background-size: auto 15px; }
   #getMore .gmRight {
     width: 140px;
     height: 90px;

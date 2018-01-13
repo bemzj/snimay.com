@@ -667,13 +667,32 @@ body{
     display: none;
     position: fixed;
     left: 0px;
-    bottom: 0px;
+    width: 260px;
+    height: 90px;
+    bottom: 50px;
+    border-radius: 0 45px 45px 0;
+    
     z-index: 100;
-    .getMore{
-        position: absolute;
-        top: 50%;
-        left: 110%;
-        
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.6);
+    .gmLeft{
+        width: 95px;
+        margin-left: 5px;
+        height: 90px;
+        font-size: 18px;
+        line-height: 90px;
+        color: white;
+    }
+    .gmRight{
+        width: 140px;
+        height: 90px;
+        position: relative;
+        img{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
     }
 }
 #add{
@@ -682,7 +701,7 @@ body{
     height: 200px;
     bottom: 0;
     left: 0;
-    
+    display: none;
     z-index: 100;;
 
     overflow: hidden;

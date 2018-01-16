@@ -95,23 +95,6 @@ header {
       padding: 55px 0;
       position: relative;
       background-color: #EEEEEE; }
-      #join .cityBox .cbRight .ccbtnBox {
-        width: 120px;
-        height: 30px;
-        position: absolute;
-        top: 15px;
-        right: 20px; }
-        #join .cityBox .cbRight .ccbtnBox button {
-          float: left;
-          width: 60px;
-          height: 28px;
-          color: #888888;
-          border: 1px solid #C8C8C8;
-          background-color: transparent; }
-        #join .cityBox .cbRight .ccbtnBox .ccActiveBtn {
-          background-color: #a51e32;
-          border-color: #a51e32;
-          color: white; }
       #join .cityBox .cbRight .areaBox {
         width: 885px;
         margin: 0 auto;
@@ -130,10 +113,26 @@ header {
           border-color: #a51e32;
           color: white; }
 
+.ccbtnBox {
+  width: 120px;
+  height: 30px;
+  margin: 30px auto; }
+  .ccbtnBox button {
+    float: left;
+    width: 60px;
+    height: 28px;
+    color: #888888;
+    border: 1px solid #C8C8C8;
+    background-color: transparent; }
+  .ccbtnBox .ccActiveBtn {
+    background-color: #a51e32;
+    border-color: #a51e32;
+    color: white; }
+
 .shopStatus {
   width: 1200px;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 100px; }
   .shopStatus table {
     width: 100%; }
@@ -241,10 +240,10 @@ header {
   .login ul li:nth-child(2) {
     background: url(../img/password.png) no-repeat 15px center;
     background-color: #f6f6f6;
-    margin-bottom: 60px; }
+    margin-bottom: 35px; }
 
 .loginBtn button {
-  width: 398px;
+  width: 280px;
   height: 58px;
   border: 1px solid #C8C8C8;
   display: block;
@@ -252,10 +251,16 @@ header {
   color: #333333;
   font-size: 18px;
   background-color: #F6F6F6;
-  margin-top: 30px; }
+  float: left; }
 .loginBtn .redbtn {
   border-color: #a51e32;
   background-color: #a51e32;
-  color: white; }
+  color: white;
+  margin-left: 100px;
+  margin-right: 40px; }
+
+.touInvist::after {
+  content: "";
+  clear: left; }
 
 /*# sourceMappingURL=countryJoin.css.map */

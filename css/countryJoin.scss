@@ -115,27 +115,7 @@ header{
             padding: 55px 0;
             position: relative;
             background-color: #EEEEEE;
-            .ccbtnBox{
-                width: 120px;
-                height: 30px;
-                position: absolute;
-                top: 15px;
-                right: 20px;
-                button{
-                    float: left;
-                    width: 60px;
-                    height: 28px;
-                    color: #888888;
-                    border: 1px solid #C8C8C8;
-                    background-color: transparent;
-                    
-                }
-                .ccActiveBtn{
-                    background-color: $red;
-                    border-color: $red;
-                    color: white;
-                }
-            }
+            
             .areaBox {              
                 width: 885px;
                 margin: 0 auto;
@@ -159,11 +139,29 @@ header{
         }
     }
 }
+.ccbtnBox {
+    width: 120px;
+    height: 30px;
+    margin: 30px auto;
+    button {
+        float: left;
+        width: 60px;
+        height: 28px;
+        color: #888888;
+        border: 1px solid #C8C8C8;
+        background-color: transparent;
+    }
+    .ccActiveBtn {
+        background-color: $red;
+        border-color: $red;
+        color: white;
+    }
+}
 
 .shopStatus{
     width: 1200px;
     margin: 0 auto;
-    margin-top: 80px;
+    margin-top: 30px;
     margin-bottom: 100px;
     table{
         width: 100%;
@@ -292,12 +290,12 @@ header{
     ul li:nth-child(2){
         background: url(../img/password.png) no-repeat 15px center;
         background-color: #f6f6f6;
-        margin-bottom: 60px;
+        margin-bottom: 35px;
     }
 }
 .loginBtn{
     button{
-        width: 398px;
+        width: 280px;
         height: 58px;
         border: 1px solid #C8C8C8;
         display: block;
@@ -305,12 +303,18 @@ header{
         color: $black;
         font-size: 18px;
         background-color: #F6F6F6;
-        margin-top: 30px;
+//      margin-top: 30px;
+        float: left;
     }
     .redbtn{
         border-color: $red;
         background-color: $red;
         color: white;
-        
+        margin-left: 100px;
+        margin-right: 40px;
     }
+}
+.touInvist::after{
+    content: "";
+    clear: left;
 }

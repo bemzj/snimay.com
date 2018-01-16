@@ -27,6 +27,7 @@ $(function(){
 //		$(this).children('p').siblings('.profess').slideUp();
 //		$(this).children('p').siblings('img').stop().css('transform','rotate(0deg)');
 //	});
+	
 	//
 	function getProvince(target,label){
 		/* 
@@ -202,6 +203,7 @@ $(function(){
 	});
 	var mapExist = false;
 	var map;
+	var swiperExist = false;
 	//选择
 	$('.netNavs ul li button').click(function(){
 		$(this).addClass('btnActive');
@@ -273,6 +275,17 @@ $(function(){
 				$('.net').hide();
 				$('.development').hide();
 				$('.honor').addClass('animated bounceInUp');
+				if(mapExist==false)
+				{
+					var myAbout = new Swiper('.swiper-container-about', {
+						loop: true,
+						autoplayDisableOnInteraction: false,
+						autoplay: 5000,
+						prevButton:'.prevLeft1',
+						nextButton:'.nextRight1',
+					});
+				}
+				
 				break;
 			case 3:
 				$('.net').show();

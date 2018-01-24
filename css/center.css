@@ -24,19 +24,20 @@ header {
   #bannerNext .swiper-pagination-bullet-active {
     border-bottom: 2px solid #a51e32; }
   #bannerNext > div:nth-child(1) {
-    width: 61.58%; }
+    width: 800px;
+    height: 450px;
+    overflow: hidden; }
   #bannerNext > div:nth-child(2) {
-    width: 38.42%;
-    height: 520px;
-    background-color: #eeeeee; }
+    width: 400px;
+    height: 450px;
+    padding-left: 20px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: white; }
     #bannerNext > div:nth-child(2) > ul > li:nth-child(1) {
       position: relative;
-      width: 100%;
-      margin-bottom: 41px; }
+      width: 100%; }
       #bannerNext > div:nth-child(2) > ul > li:nth-child(1) > img {
-        position: relative;
-        top: 0;
-        left: 0; }
+        position: relative; }
       #bannerNext > div:nth-child(2) > ul > li:nth-child(1) p {
         position: absolute;
         font-size: 22px;
@@ -55,55 +56,57 @@ header {
       overflow: hidden; }
       #bannerNext > div:nth-child(2) > ul > li > div {
         position: absolute;
-        left: 12px;
-        top: 23px;
-        width: 12px;
-        height: 12px;
+        left: 16px;
+        top: 7px;
         overflow: hidden; }
         #bannerNext > div:nth-child(2) > ul > li > div img {
-          width: auto;
-          margin-left: -212px; }
+          width: auto; }
       #bannerNext > div:nth-child(2) > ul > li .phone {
-        width: 15px;
-        height: 15px; }
-        #bannerNext > div:nth-child(2) > ul > li .phone img {
-          margin-left: -212px;
-          margin-top: -48px; }
+        top: 9px; }
       #bannerNext > div:nth-child(2) > ul > li .cityes {
         width: 124px;
-        height: 58px;
+        height: 36px;
         margin-right: 3px;
         overflow: visible;
-        background: url(../img/ms.png) no-repeat 95px center;
+        background: url(../img/tanglesan.png) no-repeat 95px center;
         background-color: white;
         background-size: 14px auto; }
         #bannerNext > div:nth-child(2) > ul > li .cityes > p {
           width: 124px;
           text-indent: 20px;
-          height: 58px;
+          height: 36px;
           font-size: 14px;
-          line-height: 58px;
+          line-height: 36px;
           border: 1px solid #c8c8c8;
-          color: #333333;
+          color: #666666;
+          border-radius: 5px;
           cursor: pointer;
           cursor: -ms-pointer; }
       #bannerNext > div:nth-child(2) > ul > li .cityes:nth-last-child(2) {
         margin-right: 0px; }
       #bannerNext > div:nth-child(2) > ul > li .word {
         margin-left: 0px; }
+      #bannerNext > div:nth-child(2) > ul > li span {
+        height: 18px;
+        display: block;
+        position: absolute;
+        top: 9px;
+        border-right: 1px solid #cccccc;
+        left: 46px; }
       #bannerNext > div:nth-child(2) > ul > li input {
-        width: 378px;
-        height: 58px;
-        border: 1px solid #c8c8c8;
+        width: 380px;
+        height: 36px;
+        border: 1px solid #cccccc;
         background-color: white;
         color: #333333;
-        text-indent: 33px; }
+        text-indent: 58px;
+        border-radius: 5px; }
       #bannerNext > div:nth-child(2) > ul > li input::-ms-input-placeholder {
-        color: #888888; }
+        color: #666666; }
       #bannerNext > div:nth-child(2) > ul > li input::-webkit-input-placeholder {
-        color: #888888; }
+        color: #666666; }
       #bannerNext > div:nth-child(2) > ul > li input::-moz-placeholder {
-        color: #888888; }
+        color: #666666; }
       #bannerNext > div:nth-child(2) > ul > li button {
         position: absolute;
         left: 0;
@@ -111,11 +114,14 @@ header {
         border: 1px solid #c8c8c8;
         display: block;
         width: 378px;
-        height: 58px;
+        height: 36px;
+        border-radius: 5px;
         font-size: 18px;
         text-align: center;
-        line-height: 58px;
-        background-color: white;
+        line-height: 36px;
+        color: white;
+        background-color: #a51e32;
+        border: 1px solid #a51e32;
         z-index: 5; }
       #bannerNext > div:nth-child(2) > ul > li button:hover::before {
         width: 100%; }
@@ -133,9 +139,8 @@ header {
         background-color: #a51e32; }
     #bannerNext > div:nth-child(2) > ul > li:nth-child(5) {
       width: 378px;
-      height: 58px;
-      position: relative;
-      margin-top: 19px; }
+      height: 36px;
+      position: relative; }
     #bannerNext > div:nth-child(2) > ul > li.city {
       overflow: visible; }
       #bannerNext > div:nth-child(2) > ul > li.city .clearl {
@@ -327,7 +332,8 @@ header {
 #bannerNext > div:nth-child(2) ul .city > div {
   position: relative;
   left: 0;
-  top: 0; }
+  top: 0;
+  border-radius: 5px; }
 
 .proviceBox {
   position: absolute;

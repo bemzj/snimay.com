@@ -202,7 +202,8 @@ $(function(){
 			$(target).attr('provice',$(this).attr('c'));
 		});
 	}
-	$('.area11>p').click(function(){
+	$('.area11>p').click(function(event){
+		event.stopPropagation();
 		$('.proviceBox').remove();
 		$('.area11').removeAttr('provice');
 		$('.area22').removeAttr('city');
@@ -223,7 +224,8 @@ $(function(){
 		$('.area22>p').html("请选择市");
 		$('.area33>p').html("请选择区");		
 	});
-	$('.area22>p').click(function(){
+	$('.area22>p').click(function(event){
+		event.stopPropagation();
 		$('.area22').removeAttr('city');
 		$('.area33').removeAttr('area');
 		$('.proviceBox').remove();
@@ -242,7 +244,8 @@ $(function(){
 		$(this).html("请选择市");
 		$('.area33>p').html("请选择区");
 	});
-	$('.area33>p').click(function(){
+	$('.area33>p').click(function(event){
+		event.stopPropagation();
 		$('.area33').removeAttr('area');
 		$('.proviceBox').remove();
 		$(this).html("请选择区");
@@ -259,7 +262,8 @@ $(function(){
 			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
 		}
 	});
-	$('.area1>p').click(function(){
+	$('.area1>p').click(function(event){
+		event.stopPropagation();
 		$('.proviceBox').remove();
 		$('.area1').removeAttr('provice');
 		$('.area2').removeAttr('city');
@@ -280,7 +284,8 @@ $(function(){
 		$('.area2>p').html("请选择市");
 		$('.area3>p').html("请选择区");		
 	});
-	$('.area2>p').click(function(){
+	$('.area2>p').click(function(event){
+		event.stopPropagation();
 		$('.area2').removeAttr('city');
 		$('.area3').removeAttr('area');
 		$('.proviceBox').remove();
@@ -299,7 +304,8 @@ $(function(){
 		$(this).html("请选择市");
 		$('.area3>p').html("请选择区");
 	});
-	$('.area3>p').click(function(){
+	$('.area3>p').click(function(event){
+		event.stopPropagation();
 		$('.area3').removeAttr('area');
 		$('.proviceBox').remove();
 		$(this).html("请选择区");
@@ -316,7 +322,8 @@ $(function(){
 			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
 		}
 	});
-	$('.area111>p').click(function(){
+	$('.area111>p').click(function(event){
+		event.stopPropagation();
 		$('.proviceBox').remove();
 		$('.area111').removeAttr('provice');
 		$('.area222').removeAttr('city');
@@ -337,7 +344,8 @@ $(function(){
 		$('.area222>p').html("请选择市");
 		$('.area333>p').html("请选择区");		
 	});
-	$('.area222>p').click(function(){
+	$('.area222>p').click(function(event){
+		event.stopPropagation();
 		$('.area222').removeAttr('city');
 		$('.area333').removeAttr('area');
 		$('.proviceBox').remove();
@@ -356,7 +364,8 @@ $(function(){
 		$(this).html("请选择市");
 		$('.area333>p').html("请选择区");
 	});
-	$('.area333>p').click(function(){
+	$('.area333>p').click(function(event){
+		event.stopPropagation();
 		$('.area333').removeAttr('area');
 		$('.proviceBox').remove();
 		$(this).html("请选择区");

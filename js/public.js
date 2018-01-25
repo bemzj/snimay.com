@@ -46,6 +46,10 @@ $(function(){
     		}       
 	    }
 	});
+	
+	$(document).click(function(){
+		$('.proviceBox').remove();
+	});
 	//
 	$('header nav .navR ul .worda').mousemove(function(){
 		$('header nav .navR ul .worda').removeClass('nwhite');

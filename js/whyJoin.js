@@ -119,7 +119,8 @@ $(function(){
 			$(target).attr('provice',$(this).attr('c'));
 		});
 	}
-	$('.area1>p').click(function(){
+	$('.area1>p').click(function(event){
+		event.stopPropagation();
 		$('.proviceBox').remove();
 		$('.area1').removeAttr('provice');
 		$('.area2').removeAttr('city');
@@ -140,7 +141,8 @@ $(function(){
 		$('.area2>p').html("请选择市");
 		$('.area3>p').html("请选择区");		
 	});
-	$('.area2>p').click(function(){
+	$('.area2>p').click(function(event){
+		event.stopPropagation();
 		$('.area2').removeAttr('city');
 		$('.area3').removeAttr('area');
 		$('.proviceBox').remove();
@@ -159,7 +161,8 @@ $(function(){
 		$(this).html("请选择市");
 		$('.area3>p').html("请选择区");
 	});
-	$('.area3>p').click(function(){
+	$('.area3>p').click(function(event){
+		event.stopPropagation();
 		$('.area3').removeAttr('area');
 		$('.proviceBox').remove();
 		$(this).html("请选择区");

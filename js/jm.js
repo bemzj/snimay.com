@@ -72,7 +72,7 @@ $(function(){
 		if($(window).width()-$(this).offset().left>=($('.proviceBox').width()+10)){
 			$('.proviceBox').css('left','0px');
 		}else if($(window).width()-$(this).offset().left<($('.proviceBox').width()+10)){
-			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+'px');
+			$('.proviceBox').css('left',($(this).width()-$('.proviceBox').width())+107+'px');
 		}
 		$(this).html("请选择市");
 		$('.area3>p').html("请选择区");

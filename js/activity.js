@@ -199,5 +199,91 @@ $(function(){
 				marginTop = 0;
 			}
 		},100);
+		$('.bannerBox').mousemove(function(){
+			clearInterval(btween);
+		});
+		$('.bannerBox').mouseout(function(){
+			btween = setInterval(function(){
+				marginTop++;
+				$('.bannerBox').css('margin-top',(-marginTop)+'px');
+				if(marginTop==length*40)
+				{
+					marginTop = 0;
+				}
+			},100);
+		});
+	});
+	//轮播
+	var groupSwiper = new Swiper('.swiper-container-group',{
+		direction : 'horizontal',
+		loop:true,
+		pagination : '.swiper-pagination',
+		paginationClickable :true,
+		onSlideChangeEnd:function(swiper){
+			var index = 4;
+			if(swiper.activeIndex==0)
+			{
+				$('.group').children('a').eq(swiper.activeIndex+index-1).addClass('gActive');
+				$('.group').children('a').eq(swiper.activeIndex+index-1).siblings('a').removeClass('gActive');
+			}else{
+				$('.group').children('a').eq(swiper.activeIndex%index-1).addClass('gActive');
+				$('.group').children('a').eq(swiper.activeIndex%index-1).siblings('a').removeClass('gActive');
+			}
+		}
+	});
+	//点击
+	$('.group a').click(function(){
+		var index = $(this).index();
+		$(this).addClass('gActive');
+		$(this).siblings('a').removeClass('gActive');
+		groupSwiper.slideTo(index+1);
+	});
+	//轮播
+	var moonSwiper = new Swiper('.swiper-container-moon',{
+		direction : 'horizontal',
+		loop:true,
+		prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next',
+		onSlideChangeEnd:function(swiper){
+			var index = 4;
+			if(swiper.activeIndex==0)
+			{
+				$('.smallImg').children('a').eq(swiper.activeIndex+index-1).addClass('blacka');
+				$('.smallImg').children('a').eq(swiper.activeIndex+index-1).siblings('a').removeClass('blacka');
+			}else{
+				$('.smallImg').children('a').eq(swiper.activeIndex%index-1).addClass('blacka');
+				$('.smallImg').children('a').eq(swiper.activeIndex%index-1).siblings('a').removeClass('blacka');
+			}
+		}
+	});
+	//点击
+	$('.smallImg a').click(function(){
+		var index = $(this).index();
+		$(this).addClass('blacka');
+		$(this).siblings('a').removeClass('blacka');
+		moonSwiper.slideTo(index+1);
+	});
+	//轮播
+	var fourSwiper = new Swiper('.swiper-container-four',{
+		direction : 'horizontal',
+		loop:true,
+		onSlideChangeEnd:function(swiper){
+			var index = 4;
+			if(swiper.activeIndex==0)
+			{
+				$('.fourChoice').children('a').eq(swiper.activeIndex+index-1).addClass('fActive');
+				$('.fourChoice').children('a').eq(swiper.activeIndex+index-1).siblings('a').removeClass('fActive');
+			}else{
+				$('.fourChoice').children('a').eq(swiper.activeIndex%index-1).addClass('fActive');
+				$('.fourChoice').children('a').eq(swiper.activeIndex%index-1).siblings('a').removeClass('fActive');
+			}
+		}
+	});
+	//点击
+	$('.fourChoice a').click(function(){
+		var index = $(this).index();
+		$(this).addClass('fActive');
+		$(this).siblings('a').removeClass('fActive');
+		fourSwiper.slideTo(index+1);
 	});
 })

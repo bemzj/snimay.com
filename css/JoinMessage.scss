@@ -8,6 +8,8 @@ header nav .navR ul li a{
 }
 body{
     background-color: white;
+    width: 680px;
+    height: 554px;
 }
 #banner{
     width: 100%;
@@ -19,17 +21,16 @@ body{
     
 }
 #jm{
-    width: 1200px;
-    padding: 0px 0 40px;
-    margin: 0 auto;
+    width: 600px;
     background-size: 100%;
+    padding: 0 40px;
     .jmForm{      
         ul li{
            width: 598px;
             height: 58px;
             border: 1px solid #c8c8c8; 
             margin:  0 auto;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             background-color: #eeeeee;
             position: relative;
             input{
@@ -135,7 +136,9 @@ body{
         }
     }
 }
-
+.bigTitle{
+    padding: 30px 0 30px;
+}
 .proviceBox {
     position: absolute;
     top: 65px;
